@@ -1,0 +1,165 @@
+.logo{
+    position:relative;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.top{
+    display:flex;
+    justify-content: center;
+    /* border-bottom:2px solid #823038; */
+}
+
+.leader{
+    display:flex;
+    height:100%;
+    width:100%;
+    justify-content: center;
+    align-content: center;
+    /* border: 2px solid red; */
+
+}
+
+.im1{
+    flex-basis: 40vw;
+    /* height:100vh;
+    width:40vw; */
+    /* border: 2px solid red; */
+    
+}
+.side-image{
+    width: 100%;
+    height: 100vh;
+}
+@media(min-width:400px){
+    .im1{
+        width: 0px;
+        /* height:100vh;
+        width:40vw; */
+        /* border: 2px solid red; */
+        
+    }
+}
+@media(height:840px){
+    .im1{
+        width: 0px;
+        /* height:100vh;
+        width:40vw; */
+        /* border: 2px solid red; */
+        
+    }
+}
+
+.sign-up{
+    /* height:100vh;
+    width:60vw; */
+    padding:0 5rem 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-heading{
+    text-align: center;
+    margin-bottom: 1rem;
+    color:#ffffff;
+}
+
+.form{
+    padding: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+.align{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+.form-label{
+    font-size: 1rem;
+    padding-left: 8px;
+    margin-bottom: 3px;
+    color: #ffffff;
+}
+.form-input{
+    width:15rem;
+    padding: 10px;
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 20px;
+    background: transparent;
+}
+.form-input::placeholder{
+    color: #ffffff;
+    font-family: poppins;
+}
+.submit{
+    width: 16rem;
+    padding: 10px;
+    font-size: 16px;
+    color:#151412;
+    margin: 15px;
+    background-color:#ffffff;
+    border-radius: 20px;
+    border: 0px ;
+    cursor: pointer;
+    font-family:Poppins;
+}
+*{
+    margin: 0;
+    padding: 0;
+} 
+.continuewithgoogle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .google-signup{
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #060504;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    font-size: 16px;
+    font-family:Poppins;
+    cursor: pointer;
+} */
+
+.google-logo{
+    width: 20px; height: 20px; margin-right: 10px;
+}
+
+
+
+body{
+    font-family:Poppins;
+    font-size: 16px;
+    color:#ffffff;
+    margin: 0;
+    background-image: url(wedbg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+

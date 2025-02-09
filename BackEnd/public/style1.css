@@ -1,0 +1,82 @@
+body{
+    background-color: #823038;
+}
+.navbar{
+    background-color: #F4F7BE !important;
+    
+}
+
+.logo{
+    height: 9vh;
+    width: 9vh;
+}
+.nav-link{
+    color: #1E000E !important;
+    margin-left: 2vh;
+}
+
+.navbar-toggler{
+    width: 5px !important;
+    height: 5px !important;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+    outline:none;
+    box-shadow: none;
+    border: 0;
+}
+.navbar-toggler span{
+    margin: 0;
+    padding: 0%;
+}
+.toggler-icon{
+    background-color: #823038;
+    display: block;
+    position: absolute;
+    height: 4px;
+    width:100%;
+    border-radius: 1px;
+    opacity: 1;
+    left:0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.middle-bar{
+    margin-top: 0%;
+}
+.navbar-toggler .top-bar {
+    margin-top: 0%;
+    transform: rotate(135deg);
+}
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.navbar-toggler .bottom-bar{
+    margin-top: 0%;
+    transform: rotate(-135deg);
+}
+.navbar-toggler.collapsed .top-bar{
+    margin-top:-10px;
+    transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .middle-bar{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar{
+    margin-top: 10px;
+    transform: rotate(0deg);
+}
+.sign-up{
+    background-color: #823038;
+    color: aliceblue;
+}
+.login{
+    border-color: #823038;
+    color: black;
+}
