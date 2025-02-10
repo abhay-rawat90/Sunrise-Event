@@ -48,6 +48,10 @@ app.get("/signup", (req, res) => {
     res.render("Signup-1");
 });
 
+app.get("/login",(req,res) =>{
+    res.render("login");
+});
+
 // API Endpoint to verify Google Token
 app.post("/verify-token", async (req, res) => {
     const { token } = req.body;
