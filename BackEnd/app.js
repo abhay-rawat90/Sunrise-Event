@@ -8,37 +8,20 @@ const CLIENT_ID = "437828331085-17gj54k6qhnri2q64trfbmg7s2s4vjjg.apps.googleuser
 const client = new OAuth2Client(CLIENT_ID);
 
 const mongoose = require('mongoose');
-
-main()
-.then(() => {
-    console.log("Connection Succesful");
-})
-.catch(err => console.log(err));
-
-async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/test');
-
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-}
-
-const userSchema = new mongoose.Schema({
-    UserName: String,
-    Email: String,
-    MobileNumber: Number,
-    password:String
-});
-
-const SEUser = mongoose.model("SEUser",userSchema);
-
-
 const port = 8080;
 
 // Middleware
 app.use(express.static(path.join(__dirname, "public")));
+app.set("views", path.join(__dirname, "views"));
 app.use(bodyParser.json()); // Parse JSON body
 
 // Render EJS Views
 app.set("view engine", "ejs");
+
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+});
+
 
 app.get("/", (req, res) => {
     res.render("home");
@@ -82,8 +65,25 @@ app.post("/verify-token", async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+
+main()
+.then(() => {
+    console.log("Connection Succesful");
+})
+.catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/test');
+}
+
+const userSchema = new mongoose.Schema({
+    UserName: String,
+    Email: String,
+    MobileNumber: Number,
+    password:String
 });
+
+const SEUser = mongoose.model("SEUser",userSchema);
+
 
 
