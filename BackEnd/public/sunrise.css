@@ -109,11 +109,12 @@ body{
     width: 50px;
   }
   .LoginForm .title{
-    font-size: 30px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 800;
+    font-style: italic;
     /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; */
-    font-family: Josefin sans !important;
-    color: #000;
+    font-family: "Lora", serif !important;
+    color: #1A1A1A;
     text-align: center;
     /* text-decoration-style: ita; */
   }
