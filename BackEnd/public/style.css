@@ -4,6 +4,7 @@
     width: 3rem;
     cursor: pointer;
     z-index: 1;
+    margin-top: 6rem;
 }
 
 .top{
@@ -89,7 +90,8 @@
     font-size: 1rem;
     padding-left: 8px;
     margin-bottom: 3px;
-    color: #ffffff;
+    color: rgba(36, 35, 35, 0.925);
+    
 }
 .form-input{
     width:15rem;
@@ -99,7 +101,7 @@
     background: transparent;
 }
 .form-input::placeholder{
-    color: #ffffff;
+    color: gray;
     font-family: poppins;
 }
 .submit{
@@ -108,9 +110,9 @@
     font-size: 16px;
     color:#151412;
     margin: 15px;
-    background-color:#ffffff;
+    background-color: transparent;
     border-radius: 20px;
-    border: 0px ;
+    border: 1px solid grey  ;
     cursor: pointer;
     font-family:Poppins;
 }
@@ -122,22 +124,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: gray;
 }
-/* .google-signup{
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 16px;
-    padding: 10px 20px;
-    margin-top: 15px;
-    text-decoration: none;
-    color: #060504;
-    display: flex;
-    align-items: center;
-    justify-content:center ;
-    font-size: 16px;
-    font-family:Poppins;
-    cursor: pointer;
-} */
 
 .google-logo{
     width: 20px; height: 20px; margin-right: 10px;
@@ -161,5 +149,30 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.form #g_id_onload{
+    margin-top: 1rem;
+    border-radius: 40px !important;
+  }
+/* .form .or{
+    margin-top: none;
+    margin-bottom: none;
+    text-align: center;
+  } */
+
+  .form .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+  }
+  .register-link p a{
+    color : #fff;
+    text-decoration: none;
+    font-weight: 600;
+  } 
+  .register-link p a:hover{
+    text-decoration: underline;
+  }
+
 
 

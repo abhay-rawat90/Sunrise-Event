@@ -41,7 +41,7 @@ app.use(bodyParser.json()); // Parse JSON body
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("home");
 });
 
 app.get("/signup", (req, res) => {

@@ -21,7 +21,8 @@
                 <a href=" http://localhost:8080"><img class ="logo" src="image2vector.svg" alt ="Sunrise Events"></a>
             </div> 
             <h1 class="form-heading">Sign Up</h1>
-            <form class ="form">
+            <div class ="form">
+            <form >
                 <div class="align">
                     <label class="form-label" id="name" for="name">Name</label>
                     <input class="form-input" type="text" id="name" placeholder="Enter your Name" required>
@@ -43,17 +44,31 @@
                     <input class="form-input" type="password" id="Confirm" placeholder="Confirm Password" required>
                 </div>
                 <button type="submit" class="submit">Create Account</button>
+                <hr>
                 
             </form>
-            <div class="continuewithgoogle">
-                or
+
+            <hr>
+            <div id="g_id_onload"
+                data-client_id="437828331085-17gj54k6qhnri2q64trfbmg7s2s4vjjg.apps.googleusercontent.com"
+                data-callback="handleCredentialResponse"
+                data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin" data-type="standard"></div>
+            <div class="register-link">
+                <p>Already Have an Account? <a href="http://localhost:8080/login">Sign in</a></p>
+            </div>
+        </div>
+            <!-- <div class="continuewithgoogle">
+          --------or---------
                 <div class="google-signup" id="g_id_onload"
                     data-client_id="437828331085-17gj54k6qhnri2q64trfbmg7s2s4vjjg.apps.googleusercontent.com"
                         data-callback="handleCredentialResponse"
                     data-auto_prompt="false">
                 </div>
             <div class="g_id_signin" data-type="standard"></div>
-            </div>
+            </div> -->
         </div>
     </div>
     
