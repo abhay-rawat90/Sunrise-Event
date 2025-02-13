@@ -12,15 +12,7 @@
     /* border-bottom:2px solid #823038; */
 }
 
-.leader{
-    display:flex;
-    height:100%;
-    width:100%;
-    justify-content: center;
-    align-content: center;
-    /* border: 2px solid red; */
 
-}
 
 .im1{
     flex-basis: 40vw;
@@ -53,13 +45,16 @@
 }
 
 .sign-up{
-    /* height:100vh;
-    width:60vw; */
-    padding:0 5rem 0 5rem;
+    min-height:100vh ;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(wedbg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 .form-heading{
     text-align: center;
@@ -68,6 +63,8 @@
 }
 
 .form{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 0;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -78,6 +75,7 @@
     backdrop-filter: blur(20px);
     border: 1px solid #ccc;
     border-radius: 15px;
+    padding: 20px 30px;
 }
 .align{
     display: flex;
@@ -89,17 +87,21 @@
     font-size: 1rem;
     padding-left: 8px;
     margin-bottom: 3px;
-    color: #ffffff;
+    color: rgba(36, 35, 35, 0.925);
+    
 }
 .form-input{
-    width:15rem;
+    height: 100%;
+    width: 100%;
     padding: 10px;
     border: 2px solid rgb(128, 128, 128);
+    font-size: 16px;
     border-radius: 20px;
     background: transparent;
+    margin-bottom: 30px;
 }
 .form-input::placeholder{
-    color: #ffffff;
+    color: gray;
     font-family: poppins;
 }
 .btn{
@@ -108,9 +110,9 @@
     font-size: 16px;
     color:#151412;
     margin: 15px;
-    background-color:#ffffff;
+    background-color: transparent;
     border-radius: 20px;
-    border: 0px ;
+    border: 1px solid grey  ;
     cursor: pointer;
     font-family:Poppins;
 }
@@ -122,22 +124,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: gray;
 }
-/* .google-signup{
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 16px;
-    padding: 10px 20px;
-    margin-top: 15px;
-    text-decoration: none;
-    color: #060504;
-    display: flex;
-    align-items: center;
-    justify-content:center ;
-    font-size: 16px;
-    font-family:Poppins;
-    cursor: pointer;
-} */
 
 .google-logo{
     width: 20px; height: 20px; margin-right: 10px;
@@ -150,10 +138,6 @@ body{
     font-size: 16px;
     color:#ffffff;
     margin: 0;
-    background-image: url(wedbg2.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -161,5 +145,30 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.form #g_id_onload{
+    margin-top: 1rem;
+    border-radius: 40px !important;
+  }
+/* .form .or{
+    margin-top: none;
+    margin-bottom: none;
+    text-align: center;
+  } */
+
+  .form .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+  }
+  .register-link p a{
+    color : #fff;
+    text-decoration: none;
+    font-weight: 600;
+  } 
+  .register-link p a:hover{
+    text-decoration: underline;
+  }
+
 
 

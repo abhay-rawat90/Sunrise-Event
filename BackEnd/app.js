@@ -16,17 +16,6 @@ app.use(express.urlencoded({ extended: true }));
 // Render EJS Views
 app.set("view engine", "ejs");
 
-main()
-  .then(() => {
-    console.log("Connection Succesful");
-  })
-  .catch((err) => console.log(err));
-
-async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/test");
-
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-}
 app.listen(8080, () => {
   console.log(`Server running on http://localhost:8080`);
 });
@@ -34,7 +23,7 @@ app.listen(8080, () => {
 // Middleware
 
 app.get("/", (req, res) => {
-  res.render("home");
+    res.render("home");
 });
 //Get req to signup
 app.get("/signup", (req, res) => {
@@ -69,31 +58,52 @@ app.post("/login", async (req, res) => {
 // API Endpoint to verify Google Token
 //For google login
 app.post("/verify-token", async (req, res) => {
-  const { token } = req.body;
-  if (!token) {
-    return res
-      .status(400)
-      .json({ success: false, message: "Token is missing!" });
-  }
+    const { token } = req.body;
 
-  try {
-    const ticket = await client.verifyIdToken({
-      idToken: token,
-      audience: CLIENT_ID,
-    });
+    if (!token) {
+        return res.status(400).json({ success: false, message: "Token is missing!" });
+    }
 
-    const payload = ticket.getPayload(); // User data
-    res.json({
-      success: true,
-      user: {
-        id: payload.sub,
-        name: payload.name,
-        email: payload.email,
-        picture: payload.picture,
-      },
-    });
-  } catch (error) {
-    console.error("Token verification error:", error);
-    res.status(401).json({ success: false, message: "Invalid Token" });
-  }
+    try {
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: CLIENT_ID,
+        });
+
+        const payload = ticket.getPayload(); // User data
+        res.json({
+            success: true,
+            user: {
+                id: payload.sub,
+                name: payload.name,
+                email: payload.email,
+                picture: payload.picture,
+            },
+        });
+    } catch (error) {
+        console.error("Token verification error:", error);
+        res.status(401).json({ success: false, message: "Invalid Token" });
+    }
 });
+
+
+main()
+.then(() => {
+    console.log("Connection Succesful");
+})
+.catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/test');
+}
+
+const userSchema = new mongoose.Schema({
+    UserName: String,
+    Email: String,
+    MobileNumber: Number,
+    password:String
+});
+
+const SEUser = mongoose.model("SEUser",userSchema);
+
+
