@@ -2,17 +2,90 @@
     margin: 0%;
     padding: 0%;
 }
+html {
+    scroll-behavior: smooth;
+}
+@media (max-width: 1200px) {
+    .hero {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: burlywood;
+        width: 100%;
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .text{
+        padding: 1rem;
+        text-align:left;
+    }
+    .title {
+      font-size: 2.8rem;
+
+    }
+  
+    .subtitle {
+      font-size: 1.4rem;
+    }
+  
+    .h-img {
+        padding: 1rem;
+        width: 100%;
+        border-radius: 1.8rem;
+        max-width: 45rem;
+        height: auto;
+    }
+  
+    .services, .work {
+      width: 60%;
+    }
+  
+    
+  }
+
+@media (max-width: 480px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .h-img {
+      max-width: 20rem;
+    }
+  
+    .services, .work {
+      width: 100%;
+    }
+  
+    .cards {
+      width: 100%;
+    }
+  
+    .bc, .os {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+  }
 .hero{
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: burlywood;
-    height: 60vh;
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .text{
     display: flex;
     flex-direction: column;
-
+    height: fit-content;
 }
 .title{
     font-family: oswald;
@@ -34,6 +107,7 @@ button{
 }
 .bc, .os{
     margin-top: 1.5rem;
+    border-radius: 1.5rem;
 }
 .bc{
     background-color:beige;
@@ -48,24 +122,28 @@ button{
     
 }
 .h-img{
+    width: 100%;
     border-radius: 1.5rem;
-    width: 40rem;
+    max-width: 40rem;
+    height: auto;
 }
 .services-container,.work-container{
-    height: 80vh;
+    height: auto;
     background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items:center;
     flex-direction: column;
     width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1rem 0;
 }
 .services, .work{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items:center;
-    width: 70%;
+    width: 100%;
 }
 h1,p{
     position: relative;
@@ -92,6 +170,8 @@ i{
     background-color: azure;
     border-radius: 1rem;
     margin-bottom: 2rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
     -webkit-box-shadow: 10px 13px 52px -21px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 13px 52px -21px rgba(0,0,0,0.75);
     box-shadow: 10px 13px 52px -21px rgba(0,0,0,0.75);

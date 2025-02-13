@@ -4,7 +4,6 @@
     width: 3rem;
     cursor: pointer;
     z-index: 1;
-    margin-top: 6rem;
 }
 
 .top{
@@ -13,15 +12,7 @@
     /* border-bottom:2px solid #823038; */
 }
 
-.leader{
-    display:flex;
-    height:100%;
-    width:100%;
-    justify-content: center;
-    align-content: center;
-    /* border: 2px solid red; */
 
-}
 
 .im1{
     flex-basis: 40vw;
@@ -54,13 +45,16 @@
 }
 
 .sign-up{
-    /* height:100vh;
-    width:60vw; */
-    padding:0 5rem 0 5rem;
+    min-height:100vh ;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(wedbg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 .form-heading{
     text-align: center;
@@ -69,6 +63,8 @@
 }
 
 .form{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 0;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -79,6 +75,7 @@
     backdrop-filter: blur(20px);
     border: 1px solid #ccc;
     border-radius: 15px;
+    padding: 20px 30px;
 }
 .align{
     display: flex;
@@ -94,11 +91,14 @@
     
 }
 .form-input{
-    width:15rem;
+    height: 100%;
+    width: 100%;
     padding: 10px;
     border: 2px solid rgb(128, 128, 128);
+    font-size: 16px;
     border-radius: 20px;
     background: transparent;
+    margin-bottom: 30px;
 }
 .form-input::placeholder{
     color: gray;
@@ -138,10 +138,6 @@ body{
     font-size: 16px;
     color:#ffffff;
     margin: 0;
-    background-image: url(wedbg2.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
 }
 
 input[type="number"]::-webkit-inner-spin-button,

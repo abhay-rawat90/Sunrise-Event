@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+footer{
+    background-color: #111; 
+    width: 100%;
+    height: auto;
+}
+.footerCon .icons{
+    display: flex;
+    /*flex-direction: column-reverse; */
+    /* min-height: 200vh !important; */
+    /* justify-content: center; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.icons a{
+    /* text-decoration: none; */
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.icons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+.bx{
+    padding: 0;
+}
+.icons a:hover{
+    /* box-shadow: 4px 4px 10px gray; */
+    background-color: black;
+    transition-duration: 0.5s;
+}
+.icons a:hover i{
+    color: white;
+    transition-duration: 0.5s;
+}
+.footerNav{
+    margin :30px 0;
+}
+.footerCon .footerNav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none; /* Removes bullets */
+    padding: 0; /* Removes default padding */
+    margin: 0
+    /* text-align: center; */
+    /* justify-content: space-around; */
+}
+/* .footerNav li{
+    /* margin-left: 500px; */
+   
+/* } */ 
+.footerCon .footerNav ul li a{
+    color: white;
+    /* justify-content: center; */
+    text-decoration: none;
+    margin : 20px;
+    font-size: 1.3em;
+    opacity: 0.7;
+    /* text-align: center; */
+    /* justify-content: space-evenly; */
+}
+.footerCon .footerNav ul li a:hover{
+    opacity:1;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+.footerCon .footerBottom{
+    background-color: #000;
+    color: #fff;
+    padding :20px;
+    text-align: center;
+}
+.footerBottom p{
+    margin: 0;
+}
+/* .footerCon .footerBottom .designer{
+ 
+} */
+/* .footerCon .footerNav ul li a i{
+    margin-top: 1px;
+} */
+.footerCon .footerBottom .designer a{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+    font-family: 'Times New Roman';
+    text-decoration: none;
+    color: white;
+}
+.footerCon .footerBottom .designer a:hover{
+    /* opacity: 1; */
+    text-decoration: underline;
+    transition: 0.5s;
+}
+@media(max-width:600px){
+    footer{
+        height: auto;
+        position: relative;
+    }
+    .footerNav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .footerNav ul li{
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 10px;
+    }
+}

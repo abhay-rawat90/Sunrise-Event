@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    
     <%- include('./includes/home-header');-%> <%-
     include('./includes/navbar/nav-header');-%>
+    <%-include('./includes/footer/footer-head');-%>
   </head>
 
   <body>
@@ -11,7 +14,7 @@
       <div class="text">
         <span class="title"
           >Creating Unforgettable <br />
-          Event Experince</span
+          Event Experience</span
         >
         <span class="subtitle">
           Specialized in wedding, reception, sangeet, and haldi decoration
@@ -19,8 +22,8 @@
           with premium rental furniture solutions.</span
         >
         <form action="" method="GET">
-          <button class="bc">Book Consultation</button>
-          <button class="os">Our Services</button>
+          <button class="bc" onclick="location.href='#booking'">Set Up a Meet</button>
+          <button class="os" onclick="location.href='#works'">Our Works</button>
         </form>
       </div>
       <div class="img">
@@ -111,10 +114,10 @@
         </div>
       </div>
     </div>
-    <div class="work-container">
+    <div class="work-container" id = "works">
       <h1>Our Work</h1>
       <p>Browse through our recent event decorations</p>
-      <div class="work">
+      <div class="work" >
         <div class="cards work-card">
           <img
             src="https://skift.com/wp-content/uploads/2024/10/Destination-Indian-Wedding-amish-thakkar-7O422yG_b80-unsplash_Scaled.jpg"
@@ -155,7 +158,7 @@
     </div>
     <!-- Calendly inline widget begin -->
     <div
-      class="calendly-inline-widget"
+      class="calendly-inline-widget" id ="booking"
       data-url="https://calendly.com/gopallsharma93/book-a-consultation?background_color=eeebd7&primary_color=696D7D"
       style="min-width: 320px; height: 700px"
     ></div>
@@ -165,5 +168,6 @@
       async
     ></script>
     <!-- Calendly inline widget end -->
+    <%-include('./includes/footer/footer-body');-%>
   </body>
 </html>
