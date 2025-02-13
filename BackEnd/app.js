@@ -62,12 +62,12 @@ app.post("/signup", async (req, res) => {
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
   const name = await seuser.find({ name: username });
-  if (name[0].name === username && await bcrypt.compare(name[0].password, password)) {
+  if (name[0].name === username && await bcrypt.compare(password, name[0].password)) {
     res.redirect("/");
   }
-  else{
-    console.log("false");
-  }
+  // else{
+  //   console.log("false");
+  // }
   
 });
 // API Endpoint to verify Google Token
