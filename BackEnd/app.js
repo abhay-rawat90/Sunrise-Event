@@ -44,6 +44,10 @@ app.get("/signup", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login");
 });
+
+app.get("/gallery", (req,res) => {
+  res.render("gallerywed")
+});
 //Post req from signup
 app.post("/signup", async (req, res) => {
   const { name, mobilenumber, email, password, confirm } = req.body;
