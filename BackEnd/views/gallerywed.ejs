@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/gallerywed.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <%-
+    include('./includes/navbar/nav-header');-%>
+    <%-include('./includes/footer/footer-head');-%>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         </style>
@@ -12,6 +15,7 @@
     <title>wedding Gallery</title>
 </head>
 <body>
+    <%- include('./includes/navbar/nav-body');-%>
     <!-- <div class="container"> -->
         <div class="container">
         <div class="heading"><h1>Capturing Moments, Creating Memories -The Magic of Sunrise Events!</h1>
@@ -83,7 +87,7 @@
         <div class="image"><img src="g1.jpg" alt="wedding pic"></div>
     </div>
 
-
+    <%-include('./includes/footer/footer-body');-%>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

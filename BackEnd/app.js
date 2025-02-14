@@ -45,6 +45,13 @@ app.get("/login", (req, res) => {
   res.render("login");
 });
 
+app.get("/admin",(req,res) => {
+    res.render("admin");
+});
+app.get("/admin-gallery",(req,res) => {
+  res.render("admin-gallery");
+});
+
 app.get("/gallery", (req,res) => {
   res.render("gallerywed")
 });

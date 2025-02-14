@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    
-    <%- include('./includes/home-header');-%> <%-
-    include('./includes/navbar/nav-header');-%>
+    <!-- add these to home header -->
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Admin</title>
+      <link rel="stylesheet" href="/home.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- end -->
+
+    <%-include('./includes/navbar/nav-header');-%>
     <%-include('./includes/footer/footer-head');-%>
   </head>
 
   <body>
-    <%- include('./includes/navbar/nav-body');-%>
+    <%- include('./includes/navbar/admin-navbar');-%>
     <div class="hero">
       <div class="text">
         <span class="title"
@@ -40,6 +65,7 @@
       <div class="services">
         <a class="redirect-services" href="#">
           <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
             <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
             <div class="title-card">Wedding Decoration</div>
             <div class="subtitle-card">
@@ -50,6 +76,7 @@
         </div>
        <a href="#" class="redirect-services">
         <div class="cards">
+          <a class="close-btn add-link" href="#">×</a>
           <div class="icon"><i class="fa-solid fa-champagne-glasses"></i></div>
           <div class="title-card">Reception Setup</div>
           <div class="subtitle-card">
@@ -59,6 +86,7 @@
        </a>
         <a href="#" class="redirect-services">
           <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
             <div class="icon"><i class="fa-solid fa-music"></i></div>
             <div class="title-card">Sangeet Decoration</div>
             <div class="subtitle-card">
@@ -68,6 +96,7 @@
         </a>
         <a href="#" class="redirect-services">
           <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
             <div class="icon"><i class="fa-solid fa-sun"></i></div>
             <div class="title-card">Haldi Decoration</div>
             <div class="subtitle-card">
@@ -77,6 +106,7 @@
         </a>
         <a href="#" class="redirect-services">
           <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
             <div class="icon"><i class="fa-solid fa-couch"></i></div>
             <div class="title-card">Rental Furniture</div>
             <div class="subtitle-card">
@@ -86,6 +116,7 @@
         </a>
         <a href="#" class="redirect-services">
           <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
             <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
             <div class="title-card">Sitting Arrangment</div>
             <div class="subtitle-card">
@@ -95,13 +126,21 @@
         </a>
         <a href="#" class="redirect-services">
           <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
             <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
             <div class="title-card">Other Events</div>
             <div class="subtitle-card">
-              Baby Shower, Birthday Parties, Engagements, Corporate Events
+              Baby Shower, Birthday Parties, Surprise Parties, Corporate Events
             </div>
           </div>
         </a>
+
+        <a href="#" class="add-link"> 
+        <div class="add-card">
+          +
+        </div>
+        </a>
+
       </div>
     </div>
     <div class="work-container" id = "works">
@@ -109,46 +148,55 @@
       <p>Browse through our recent event decorations</p>
       <div class="work" >
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://skift.com/wp-content/uploads/2024/10/Destination-Indian-Wedding-amish-thakkar-7O422yG_b80-unsplash_Scaled.jpg"
             alt=""
           />
         </div>
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://youthincmag.com/wp-content/uploads/2019/04/Wedding-trends-pinterest-1280x720.jpg"
             alt=""
           />
         </div>
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://www.mohifashion.com/cdn/shop/articles/BB_216433_Final_320eb394-2ae4-42e1-91f1-7e342fc976df.jpg?v=1718363593"
             alt=""
           />
         </div>
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://cdn0.weddingwire.in/article/9535/3_2/960/jpg/15359-hindu-marriage-the-lightsmiths-lead-image.jpeg"
             alt=""
           />
         </div>
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://rainmakerweddings.com/wp-content/uploads/2024/11/Hindu-wedding-picture-768x512.webp"
             alt=""
           />
         </div>
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/09/1554703171wedding-decor.jpg"
             alt=""
           />
         </div>
+        
+        <a href="#" class="add-link"> 
+          <div class="add-card">
+            +
+          </div>
+          </a>
       </div>
     </div>
-    <a href="https://wa.me/916265366651?text=Hello%2C%20I%27m%20interested%20in%20your%20services!" target="_blank" class="whatsapp-float">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
     <!-- Calendly inline widget begin -->
     <div
       class="calendly-inline-widget" id ="booking"
