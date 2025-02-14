@@ -53,6 +53,13 @@ app.get("/gallery", (req,res) => {
   res.render("gallerywed")
 });
 
+
+app.get("/enter-email", (req,res) => {
+  res.render("enter-email")
+});
+app.get("/reset-password", (req,res) => {
+  res.render("reset-password")
+});
 app.get("/booking",(req,res) => {
   res.render("booking");
 })
