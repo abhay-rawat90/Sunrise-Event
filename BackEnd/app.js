@@ -53,12 +53,20 @@ app.get("/gallery", (req,res) => {
   res.render("gallerywed")
 });
 
+
 app.get("/enter-email", (req,res) => {
   res.render("enter-email")
 });
 app.get("/reset-password", (req,res) => {
   res.render("reset-password")
 });
+app.get("/booking",(req,res) => {
+  res.render("booking");
+})
+
+app.get("/admin-gallery",(req,res) => {
+  res.render("admin-gallery");
+})
 //Post req from signup
 app.post("/signup", async (req, res) => {
   const { name, mobilenumber, email, password, confirm } = req.body;
@@ -79,7 +87,7 @@ app.post("/login", async (req, res) => {
   const name = await seuser.find({ name: username });
   if(password == "admin#123" && username == "admin")
   {
-    res.render("admin");
+    res.render("admin",{ name });
   }
   if (name[0].name === username && await bcrypt.compare(password, name[0].password)) {
     res.render("home after login",{ name });
