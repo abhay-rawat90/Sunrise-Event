@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    
+    <%- include('./includes/home-header');-%> <%-
+    include('./includes/navbar/nav-header');-%>
+    <%-include('./includes/footer/footer-head');-%>
+  </head>
+
+  <body>
+    <%- include('./includes/navbar/nav-body login');-%>
+    <div class="hero">
+      <div class="text">
+        <span class="title"
+          >Creating Unforgettable <br />
+          Event Experience</span
+        >
+        <span class="subtitle">
+          Specialized in wedding, reception, sangeet, and haldi decoration
+          <br />
+          with premium rental furniture solutions.</span
+        >
+        <form action="" method="GET">
+          <button class="bc" onclick="location.href='#booking'">Set Up a Meet</button>
+          <button class="os" onclick="location.href='#works'">Our Works</button>
+        </form>
+      </div>
+      <div class="img">
+        <img
+          class="h-img"
+          src="https://t4.ftcdn.net/jpg/04/20/23/09/360_F_420230944_5zUmrpR5akRiCEZhhRtapMkpvd67Hw7C.jpg"
+          alt="Mandap image"
+        />
+      </div>
+    </div>
+    <div class="services-container">
+      <h1>Our services</h1>
+      <p>Comprehensive event doceration solution for every occasion</p>
+      <div class="services">
+        <a class="redirect-services" href="#">
+          <div class="cards">
+            <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+            <div class="title-card">Wedding Decoration</div>
+            <div class="subtitle-card">
+              Transform your special day with our elegant wedding decoration
+              services
+            </div>
+        </a>
+        </div>
+       <a href="#" class="redirect-services">
+        <div class="cards">
+          <div class="icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <div class="title-card">Reception Setup</div>
+          <div class="subtitle-card">
+            Create memorable celebrations with our reception decoration services
+          </div>
+        </div>
+       </a>
+        <a href="#" class="redirect-services">
+          <div class="cards">
+            <div class="icon"><i class="fa-solid fa-music"></i></div>
+            <div class="title-card">Sangeet Decoration</div>
+            <div class="subtitle-card">
+              Set a perfect ambience for your musical celebration
+            </div>
+          </div>
+        </a>
+        <a href="#" class="redirect-services">
+          <div class="cards">
+            <div class="icon"><i class="fa-solid fa-sun"></i></div>
+            <div class="title-card">Haldi Decoration</div>
+            <div class="subtitle-card">
+              Beautiful decoration for traditional haldi ceremonies
+            </div>
+          </div>
+        </a>
+        <a href="#" class="redirect-services">
+          <div class="cards">
+            <div class="icon"><i class="fa-solid fa-couch"></i></div>
+            <div class="title-card">Rental Furniture</div>
+            <div class="subtitle-card">
+              Premium furniture rentals for your event needs
+            </div>
+          </div>
+        </a>
+        <a href="#" class="redirect-services">
+          <div class="cards">
+            <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+            <div class="title-card">Sitting Arrangment</div>
+            <div class="subtitle-card">
+              Professional sitting layout with maximum comfort
+            </div>
+          </div>
+        </a>
+        <a href="#" class="redirect-services">
+          <div class="cards">
+            <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+            <div class="title-card">Other Events</div>
+            <div class="subtitle-card">
+              Baby Shower, Birthday Parties, Engagements, Corporate Events
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="work-container" id = "works">
+      <h1>Our Work</h1>
+      <p>Browse through our recent event decorations</p>
+      <div class="work" >
+        <div class="cards work-card">
+          <img
+            src="https://skift.com/wp-content/uploads/2024/10/Destination-Indian-Wedding-amish-thakkar-7O422yG_b80-unsplash_Scaled.jpg"
+            alt=""
+          />
+        </div>
+        <div class="cards work-card">
+          <img
+            src="https://youthincmag.com/wp-content/uploads/2019/04/Wedding-trends-pinterest-1280x720.jpg"
+            alt=""
+          />
+        </div>
+        <div class="cards work-card">
+          <img
+            src="https://www.mohifashion.com/cdn/shop/articles/BB_216433_Final_320eb394-2ae4-42e1-91f1-7e342fc976df.jpg?v=1718363593"
+            alt=""
+          />
+        </div>
+        <div class="cards work-card">
+          <img
+            src="https://cdn0.weddingwire.in/article/9535/3_2/960/jpg/15359-hindu-marriage-the-lightsmiths-lead-image.jpeg"
+            alt=""
+          />
+        </div>
+        <div class="cards work-card">
+          <img
+            src="https://rainmakerweddings.com/wp-content/uploads/2024/11/Hindu-wedding-picture-768x512.webp"
+            alt=""
+          />
+        </div>
+        <div class="cards work-card">
+          <img
+            src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/09/1554703171wedding-decor.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <a href="https://wa.me/916265366651?text=Hello%2C%20I%27m%20interested%20in%20your%20services!" target="_blank" class="whatsapp-float">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <!-- Calendly inline widget begin -->
+    <div
+      class="calendly-inline-widget" id ="booking"
+      data-url="https://calendly.com/gopallsharma93/book-a-consultation?background_color=eeebd7&primary_color=696D7D"
+      style="min-width: 320px; height: 700px"
+    ></div>
+    <script
+      type="text/javascript"
+      src="https://assets.calendly.com/assets/external/widget.js"
+      async
+    ></script>
+    <!-- Calendly inline widget end -->
+    <%-include('./includes/footer/footer-body');-%>
+  </body>
+</html>
