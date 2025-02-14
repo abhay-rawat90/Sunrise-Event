@@ -80,3 +80,10 @@ body{
     border-color: #c0ebe4;
     color: rgb(255, 255, 255);
 }
+.login:hover{
+    background-color: #383941 !important;
+    border-color: #383941 !important;
+}
+.sign-up:hover{
+    color:#ffffff !important;
+}
