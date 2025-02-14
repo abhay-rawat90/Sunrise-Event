@@ -55,6 +55,13 @@ app.get("/admin-gallery",(req,res) => {
 app.get("/gallery", (req,res) => {
   res.render("gallerywed")
 });
+
+app.get("/enter-email", (req,res) => {
+  res.render("enter-email")
+});
+app.get("/reset-password", (req,res) => {
+  res.render("reset-password")
+});
 //Post req from signup
 app.post("/signup", async (req, res) => {
   const { name, mobilenumber, email, password, confirm } = req.body;

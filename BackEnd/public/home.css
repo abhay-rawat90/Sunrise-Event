@@ -74,13 +74,21 @@ html {
   }
 .hero{
     display: flex;
+    margin-top: -5.55rem;
     justify-content: space-around;
     align-items: center;
+    color:#fff;
     background-color: burlywood;
     width: 100%;
     height: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 6.55rem;
+    padding-bottom: 4rem;
+    background-image: url(Outdoor-Mehndi-Setup.jpg);
+    background-size: cover;
+    background-attachment:local;
+    background-position:center;
+    background-color: rgba(128, 128, 128, 0.5); /* Gray tint */
+    background-blend-mode: multiply;
 }
 .text{
     display: flex;
@@ -108,6 +116,12 @@ button{
 .bc, .os{
     margin-top: 1.5rem;
     border-radius: 1.5rem;
+}
+.hero-form{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start;
 }
 .bc{
     background-color:beige;
@@ -182,11 +196,21 @@ i{
 .services .cards{
     padding: 1rem;
 }
+.services button{
+        all: unset; /* Removes all default styles */
+        display: inline-block; /* Ensures it behaves like a button */
+        cursor: pointer; /* Keeps the pointer effect */
+}
+.work button{
+    all: unset; /* Removes all default styles */
+    display: inline-block; /* Ensures it behaves like a button */
+    cursor: pointer; /* Keeps the pointer effect */
+}
 .redirect-services{
     color: inherit;
     text-decoration: none;
 }
-.services .cards:hover {
+.cards:hover {
     transform: scale(1.05);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     background-color: #fcfddd;

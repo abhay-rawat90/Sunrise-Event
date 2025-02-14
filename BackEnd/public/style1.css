@@ -2,8 +2,8 @@ body{
     background-color: #ffffff;
 }
 .navbar{
-    background-color: #F4F7BE !important;
-    
+    background-color: rgba(0, 0, 0, 0) !important;
+    z-index: 100;
 }
 
 .logo{
@@ -11,7 +11,7 @@ body{
     width: 9vh;
 }
 .nav-link{
-    color: #1E000E !important;
+    color: #ffffff !important;
     margin-left: 2vh;
 }
 
@@ -73,10 +73,10 @@ body{
     transform: rotate(0deg);
 }
 .sign-up{
-    background-color: #823038;
-    color: aliceblue;
+    background-color: #d2bd54;
+    color: rgb(0, 0, 0);
 }
 .login{
-    border-color: #823038;
-    color: black;
+    border-color: #c0ebe4;
+    color: rgb(255, 255, 255);
 }
