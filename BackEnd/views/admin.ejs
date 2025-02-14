@@ -34,7 +34,7 @@
   </head>
 
   <body>
-    <%- include('./includes/navbar/nav-body');-%>
+    <%- include('./includes/navbar/admin-navbar');-%>
     <div class="hero">
       <div class="text">
         <span class="title"
@@ -63,81 +63,79 @@
       <h1>Our services</h1>
       <p>Comprehensive event doceration solution for every occasion</p>
       <div class="services">
-        <div class="cards">
-          <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
-          <div class="title-card">Wedding Decoration</div>
-          <div class="subtitle-card">
-            Transform your special day with our elegant wedding decoration
-            services
-          </div>
-          <div class="view-more">
-            <a href="">
-              View more <i class="fa-solid fa-circle-arrow-right"></i>
-            </a>
-          </div>
+        <a class="redirect-services" href="#">
+          <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
+            <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+            <div class="title-card">Wedding Decoration</div>
+            <div class="subtitle-card">
+              Transform your special day with our elegant wedding decoration
+              services
+            </div>
+        </a>
         </div>
+       <a href="#" class="redirect-services">
         <div class="cards">
+          <a class="close-btn add-link" href="#">×</a>
           <div class="icon"><i class="fa-solid fa-champagne-glasses"></i></div>
           <div class="title-card">Reception Setup</div>
           <div class="subtitle-card">
-            create memorable celebrationswith our reception decoration services
-          </div>
-          <div class="view-more">
-            <a href="">
-              View more <i class="fa-solid fa-circle-arrow-right"></i>
-            </a>
+            Create memorable celebrations with our reception decoration services
           </div>
         </div>
-        <div class="cards">
-          <div class="icon"><i class="fa-solid fa-music"></i></div>
-          <div class="title-card">Sangeet Decoration</div>
-          <div class="subtitle-card">
-            Set a perfect ambiancefor your musical celebration
+       </a>
+        <a href="#" class="redirect-services">
+          <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
+            <div class="icon"><i class="fa-solid fa-music"></i></div>
+            <div class="title-card">Sangeet Decoration</div>
+            <div class="subtitle-card">
+              Set a perfect ambience for your musical celebration
+            </div>
           </div>
-          <div class="view-more">
-            <a href="">
-              View more <i class="fa-solid fa-circle-arrow-right"></i>
-            </a>
+        </a>
+        <a href="#" class="redirect-services">
+          <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
+            <div class="icon"><i class="fa-solid fa-sun"></i></div>
+            <div class="title-card">Haldi Decoration</div>
+            <div class="subtitle-card">
+              Beautiful decoration for traditional haldi ceremonies
+            </div>
           </div>
-        </div>
-        <div class="cards">
-          <div class="icon"><i class="fa-solid fa-sun"></i></div>
-          <div class="title-card">Haldi Decoration</div>
-          <div class="subtitle-card">
-            Beautiful decoration for traditional haldi ceremonies
+        </a>
+        <a href="#" class="redirect-services">
+          <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
+            <div class="icon"><i class="fa-solid fa-couch"></i></div>
+            <div class="title-card">Rental Furniture</div>
+            <div class="subtitle-card">
+              Premium furniture rentals for your event needs
+            </div>
           </div>
-          <div class="view-more">
-            <a href="">
-              View more <i class="fa-solid fa-circle-arrow-right"></i>
-            </a>
+        </a>
+        <a href="#" class="redirect-services">
+          <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
+            <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+            <div class="title-card">Sitting Arrangment</div>
+            <div class="subtitle-card">
+              Professional sitting layout with maximum comfort
+            </div>
           </div>
-        </div>
-        <div class="cards">
-          <div class="icon"><i class="fa-solid fa-couch"></i></div>
-          <div class="title-card">Rental Furniture</div>
-          <div class="subtitle-card">
-            Premium furniture rentals for your event needs
+        </a>
+        <a href="#" class="redirect-services">
+          <div class="cards">
+            <a class="close-btn add-link" href="#">×</a>
+            <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+            <div class="title-card">Other Events</div>
+            <div class="subtitle-card">
+              Baby Shower, Birthday Parties, Surprise Parties, Corporate Events
+            </div>
           </div>
-          <div class="view-more">
-            <a href="">
-              View more
-              <i class="fa-solid fa-circle-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
-          <div class="title-card">Sitting Arrangment</div>
-          <div class="subtitle-card">
-            Professional sitting layout with maximum comfort
-          </div>
-          <div class="view-more">
-            <a href="">
-              View more <i class="fa-solid fa-circle-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <a href="#"> 
+        </a>
+
+        <a href="#" class="add-link"> 
         <div class="add-card">
           +
         </div>
@@ -150,41 +148,53 @@
       <p>Browse through our recent event decorations</p>
       <div class="work" >
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://skift.com/wp-content/uploads/2024/10/Destination-Indian-Wedding-amish-thakkar-7O422yG_b80-unsplash_Scaled.jpg"
             alt=""
           />
         </div>
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://youthincmag.com/wp-content/uploads/2019/04/Wedding-trends-pinterest-1280x720.jpg"
             alt=""
           />
         </div>
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://www.mohifashion.com/cdn/shop/articles/BB_216433_Final_320eb394-2ae4-42e1-91f1-7e342fc976df.jpg?v=1718363593"
             alt=""
           />
         </div>
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://cdn0.weddingwire.in/article/9535/3_2/960/jpg/15359-hindu-marriage-the-lightsmiths-lead-image.jpeg"
             alt=""
           />
         </div>
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://rainmakerweddings.com/wp-content/uploads/2024/11/Hindu-wedding-picture-768x512.webp"
             alt=""
           />
         </div>
         <div class="cards work-card">
+          <a class="close-btn add-link" href="#">×</a>
           <img
             src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/09/1554703171wedding-decor.jpg"
             alt=""
           />
         </div>
+        
+        <a href="#" class="add-link"> 
+          <div class="add-card">
+            +
+          </div>
+          </a>
       </div>
     </div>
     <!-- Calendly inline widget begin -->
