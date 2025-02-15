@@ -33,8 +33,14 @@ body{
     margin: 0;
     padding: 0%;
 }
+.dropdown-menu{
+    background: transparent;
+}
+.dropdown-item{
+    color: #ffffff;
+}
 .toggler-icon{
-    background-color: #823038;
+    background-color: #fffefd;
     display: block;
     position: absolute;
     height: 4px;
@@ -86,4 +92,18 @@ body{
 }
 .sign-up:hover{
     color:#ffffff !important;
+}
+.profile{
+    all: unset; /* Removes all default styles */
+    display: inline-block; /* Ensures it behaves like a button */
+    cursor: pointer;
+}
+.profile i{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+.login-d-flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }

@@ -9,36 +9,30 @@
   </head>
 
   <body>
-    <%- include('./includes/navbar/nav-body');-%>
+    
     <div class="hero">
-      <div class="text">
-        <span class="title"
-          >Creating Unforgettable <br />
-          Event Experience</span
-        >
-        <span class="subtitle">
-          Specialized in wedding, reception, sangeet, and haldi decoration
-          <br />
-          with premium rental furniture solutions.</span
-        >
-        <!-- <form action="" method="GET">
-          <button class="bc" onclick="location.href='#booking'">Set Up a Meet</button>
-          <button class="os" onclick="location.href='#works'">Our Works</button>
-        </form> -->
-        <div class="hero-form">
-            <form method="GET" action="/booking">
-              <button class="bc">Set Up a Meet</button>
-            </form>
-            <button class="os" onclick="location.href='#works'">Our Works</button>
-        </div>
+      <div class="navbar-layout">
+        <%- include('./includes/navbar/nav-body');-%>
       </div>
-      <!-- <div class="img">
-        <img
-          class="h-img"
-          src="https://t4.ftcdn.net/jpg/04/20/23/09/360_F_420230944_5zUmrpR5akRiCEZhhRtapMkpvd67Hw7C.jpg"
-          alt="Mandap image"
-        />
-      </div> -->
+      <div class="text-parent">
+        <div class="text">
+          <span class="title"
+            >Creating Unforgettable <br />
+            Event Experience</span
+          >
+          <span class="subtitle">
+            Specialized in wedding, reception, sangeet, and haldi decoration
+            <br />
+            with premium rental furniture solutions.</span
+          >
+          <div class="hero-form">
+              <form method="GET" action="/booking">
+                <button class="bc">Set Up a Meet</button>
+              </form>
+              <button class="os" onclick="location.href='#works'">Our Works</button>
+          </div>
+      </div>
+      </div>
     </div>
     <div class="services-container">
       <h1>Our services</h1>
@@ -155,18 +149,23 @@
     <a href="https://wa.me/916265366651?text=Hello%2C%20I%27m%20interested%20in%20your%20services!" target="_blank" class="whatsapp-float">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
-    <!-- Calendly inline widget begin -->
-    <div
-      class="calendly-inline-widget" id ="booking"
-      data-url="https://calendly.com/gopallsharma93/book-a-consultation?background_color=eeebd7&primary_color=696D7D"
-      style="min-width: 320px; height: 700px"
-    ></div>
-    <script
-      type="text/javascript"
-      src="https://assets.calendly.com/assets/external/widget.js"
-      async
-    ></script>
-    <!-- Calendly inline widget end -->
+    <script>
+      // Wait for the DOM to load
+      document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar.offsetHeight;
+        
+        // Set the value to a CSS variable
+        document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+      });
+  
+      // Optional: If you need to update the navbar height on window resize
+      window.addEventListener('resize', () => {
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar.offsetHeight;
+        document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+      });
+    </script>
     <%-include('./includes/footer/footer-body');-%>
   </body>
 </html>

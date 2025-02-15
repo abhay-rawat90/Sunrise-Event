@@ -34,24 +34,28 @@
   </head>
 
   <body>
-    <%- include('./includes/navbar/nav-body');-%>
     <div class="hero">
-      <div class="text">
-        <span class="title"
-          >Creating Unforgettable <br />
-          Event Experience</span
-        >
-        <span class="subtitle">
-          Specialized in wedding, reception, sangeet, and haldi decoration
-          <br />
-          with premium rental furniture solutions.</span
-        >
-        <div class="hero-form">
-            <form method="GET" action="/booking">
-              <button class="bc">Set Up a Meet</button>
-            </form>
-            <button class="os" onclick="location.href='#works'">Our Works</button>
-        </div>
+      <div class="navbar-layout">
+        <%- include('./includes/navbar/nav-body-login');-%>
+      </div>
+      <div class="text-parent">
+        <div class="text">
+          <span class="title"
+            >Creating Unforgettable <br />
+            Event Experience</span
+          >
+          <span class="subtitle">
+            Specialized in wedding, reception, sangeet, and haldi decoration
+            <br />
+            with premium rental furniture solutions.</span
+          >
+          <div class="hero-form">
+              <form method="GET" action="/booking">
+                <button class="bc">Set Up a Meet</button>
+              </form>
+              <button class="os" onclick="location.href='#works'">Our Works</button>
+          </div>
+      </div>
       </div>
     </div>
     <div class="services-container">
@@ -192,18 +196,6 @@
         </button>
       </div>
     </div>
-    <!-- Calendly inline widget begin -->
-    <div
-      class="calendly-inline-widget" id ="booking"
-      data-url="https://calendly.com/gopallsharma93/book-a-consultation?background_color=eeebd7&primary_color=696D7D"
-      style="min-width: 320px; height: 700px"
-    ></div>
-    <script
-      type="text/javascript"
-      src="https://assets.calendly.com/assets/external/widget.js"
-      async
-    ></script>
-    <!-- Calendly inline widget end -->
     <%-include('./includes/footer/footer-body');-%>
   </body>
   <script> 

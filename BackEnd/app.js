@@ -59,6 +59,9 @@ app.get("/enter-email", (req,res) => {
 app.get("/reset-password", (req,res) => {
   res.render("reset-password")
 });
+app.get("/contactus", (req,res) => {
+  res.render("contact")
+});
 //Post req from signup
 app.post("/signup", async (req, res) => {
   const { name, mobilenumber, email, password, confirm } = req.body;
