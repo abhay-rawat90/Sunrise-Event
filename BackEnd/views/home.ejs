@@ -149,23 +149,7 @@
     <a href="https://wa.me/916265366651?text=Hello%2C%20I%27m%20interested%20in%20your%20services!" target="_blank" class="whatsapp-float">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
-    <script>
-      // Wait for the DOM to load
-      document.addEventListener('DOMContentLoaded', () => {
-        const navbar = document.querySelector('.navbar');
-        const navbarHeight = navbar.offsetHeight;
-        
-        // Set the value to a CSS variable
-        document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
-      });
-  
-      // Optional: If you need to update the navbar height on window resize
-      window.addEventListener('resize', () => {
-        const navbar = document.querySelector('.navbar');
-        const navbarHeight = navbar.offsetHeight;
-        document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
-      });
-    </script>
     <%-include('./includes/footer/footer-body');-%>
+    
   </body>
 </html>
