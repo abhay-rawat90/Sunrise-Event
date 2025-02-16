@@ -9,36 +9,29 @@
   </head>
 
   <body>
-    <%- include('./includes/navbar/nav-body');-%>
     <div class="hero">
-      <div class="text">
-        <span class="title"
-          >Creating Unforgettable <br />
-          Event Experience</span
-        >
-        <span class="subtitle">
-          Specialized in wedding, reception, sangeet, and haldi decoration
-          <br />
-          with premium rental furniture solutions.</span
-        >
-        <!-- <form action="" method="GET">
-          <button class="bc" onclick="location.href='#booking'">Set Up a Meet</button>
-          <button class="os" onclick="location.href='#works'">Our Works</button>
-        </form> -->
-        <div class="hero-form">
-            <form method="GET" action="/booking">
-              <button class="bc">Set Up a Meet</button>
-            </form>
-            <button class="os" onclick="location.href='#works'">Our Works</button>
-        </div>
+      <div class="navbar-layout">
+        <%- include('./includes/navbar/nav-body');-%>
       </div>
-      <!-- <div class="img">
-        <img
-          class="h-img"
-          src="https://t4.ftcdn.net/jpg/04/20/23/09/360_F_420230944_5zUmrpR5akRiCEZhhRtapMkpvd67Hw7C.jpg"
-          alt="Mandap image"
-        />
-      </div> -->
+      <div class="text-parent">
+        <div class="text">
+          <span class="title"
+            >Creating Unforgettable <br />
+            Event Experience</span
+          >
+          <span class="subtitle">
+            Specialized in wedding, reception, sangeet, and haldi decoration
+            <br />
+            with premium rental furniture solutions.</span
+          >
+          <div class="hero-form">
+              <form method="GET" action="/booking">
+                <button class="bc">Set Up a Meet</button>
+              </form>
+              <button class="os" onclick="location.href='#works'">Our Works</button>
+          </div>
+      </div>
+      </div>
     </div>
     <div class="services-container">
       <h1>Our services</h1>
@@ -99,7 +92,7 @@
             </div>
           </div>
         </a>
-        <a href="#" class="redirect-services">
+        <a href="/birthday" class="redirect-services">
           <div class="cards">
             <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
             <div class="title-card">Other Events</div>
@@ -152,10 +145,65 @@
         </div>
       </div>
     </div>
+    <div class="reviews" id = "works">
+      <h1>Customer Reviews</h1>
+      <p>See what our customers responded to our Services</p>
+      <div class="work" >
+        <a href="https://www.justdial.com/Surat/Charli-Event/0261PX261-X261-180424130057-N1N2_BZDET" target="_blank">
+          <div class="cards review-card">
+          <img
+            src="review-1.jpg"
+            alt=""
+          />
+        </div>
+      </a>
+      <a href="https://www.justdial.com/Surat/Charli-Event/0261PX261-X261-180424130057-N1N2_BZDET" target="_blank">
+        <div class="cards review-card">
+          <img
+            src="review-2.jpg"
+            alt=""
+          />
+        </div>
+      </a>
+        <a href="https://www.justdial.com/Surat/Charli-Event/0261PX261-X261-180424130057-N1N2_BZDET" target="_blank">
+        <div class="cards review-card">
+          <img
+            src="review-3.jpg"
+            alt=""
+          />
+        </div>
+      </a>
+        <a href="https://www.justdial.com/Surat/Charli-Event/0261PX261-X261-180424130057-N1N2_BZDET" target="_blank">
+        <div class="cards review-card">
+          <img
+            src="review-4.jpg"
+            alt=""
+          />
+        </div>
+      </a>
+        
+      </div>
+    </div>
     <a href="https://wa.me/916265366651?text=Hello%2C%20I%27m%20interested%20in%20your%20services!" target="_blank" class="whatsapp-float">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
+    <script>
+      // Wait for the DOM to load
+      document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar.offsetHeight;
+        
+        // Set the value to a CSS variable
+        document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+      });
+  
+      // Optional: If you need to update the navbar height on window resize
+      window.addEventListener('resize', () => {
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar.offsetHeight;
+        document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+      });
+    </script>
     <%-include('./includes/footer/footer-body');-%>
-    
   </body>
 </html>

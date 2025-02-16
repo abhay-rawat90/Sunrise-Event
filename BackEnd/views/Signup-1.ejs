@@ -123,8 +123,7 @@
           .then((data) => {
             console.log("Backend Response:", data);
             if (data.success) {
-              alert("Login Successful! Welcome " + data.user.name);
-              // Redirect or save user data in session
+              window.location.href = "/home-login"
             } else {
               alert("Login Failed!");
             }

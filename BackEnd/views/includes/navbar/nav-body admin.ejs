@@ -22,7 +22,7 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/admin-gallery">Gallery</a>
+          <a class="nav-link" href="/gallery">Gallery</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Review</a>
@@ -54,14 +54,17 @@
             aria-disabled="true">About Us</a>
         </li>
       </ul>
-      <div class="d-flex">
-        <h3>Hello,<%= name[0].name %> </h3>
-        <a href="http://localhost:8080">
+      <div class="login-d-flex">
+        <a href="http://localhost:8080/signup"
+          ><button class="profile" type="submit">
+              <i class='bx bxs-user-circle'></i>
+          </button></a>
+          <a href="http://localhost:8080">
 
-        <button class="btn btn-outline-success login mx-2" type="submit">
-          Logout
-        </button>
-      </a>
+              <button class="btn btn-outline-success login mx-2" type="submit">
+                Logout
+              </button>
+            </a>
       </div>
     </div>
   </div>

@@ -6,18 +6,6 @@ html {
     scroll-behavior: smooth;
 }
 @media (max-width: 1200px) {
-    .hero {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: burlywood;
-        width: 100%;
-        height: auto;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
     .text{
         padding: 1rem;
         text-align:left;
@@ -41,11 +29,8 @@ html {
   
     .services, .work {
       width: 60%;
-    }
-  
-    
+    }  
   }
-
 @media (max-width: 480px) {
     .title {
       font-size: 1.8rem;
@@ -73,16 +58,15 @@ html {
     }
   }
 .hero{
+    padding: 0;
     display: flex;
-    margin-top: -5.55rem;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
     color:#fff;
     background-color: burlywood;
     width: 100%;
-    height: auto;
-    padding-top: 6.55rem;
-    padding-bottom: 4rem;
+    min-height: 100vh;
     background-image: url(Outdoor-Mehndi-Setup.jpg);
     background-size: cover;
     background-attachment:local;
@@ -90,11 +74,21 @@ html {
     background-color: rgba(128, 128, 128, 0.5); /* Gray tint */
     background-blend-mode: multiply;
 }
+.navbar-layout{
+    width: 100%;
+}
 .text{
     display: flex;
     flex-direction: column;
+    
     height: fit-content;
+    padding: 2rem;
 }
+.text-parent{
+    display: flex;
+    
+}
+
 .title{
     font-family: oswald;
     font-weight: 600;
@@ -124,11 +118,12 @@ button{
     justify-content: flex-start;
 }
 .bc{
-    background-color:beige;
+    background-color:#EEEBD7;
+    border-color:#EEEBD7 ;
 }
 .os{
-    background-color: burlywood;
-    border: 2px solid beige;
+    background-color: #696D7D;
+    border: 2px solid #696D7D;
     color: beige;
 }
 .img{
@@ -141,7 +136,8 @@ button{
     max-width: 40rem;
     height: auto;
 }
-.services-container,.work-container{
+
+.services-container,.work-container,.reviews{
     height: auto;
     background-color: antiquewhite;
     display: flex;
@@ -196,15 +192,10 @@ i{
 .services .cards{
     padding: 1rem;
 }
-.services button{
+.services .add-link{
         all: unset; /* Removes all default styles */
         display: inline-block; /* Ensures it behaves like a button */
         cursor: pointer; /* Keeps the pointer effect */
-}
-.work button{
-    all: unset; /* Removes all default styles */
-    display: inline-block; /* Ensures it behaves like a button */
-    cursor: pointer; /* Keeps the pointer effect */
 }
 .redirect-services{
     color: inherit;
@@ -287,10 +278,19 @@ i{
     font-size: 14px;
     cursor: pointer;
     z-index: 1;
+    border: none;
+    outline: none; 
+    padding: 0;
+    line-height: 1;
 }
-.work-card .close-btn{
-    background-color: white ;
-    color:black;
+
+.close-btn:focus {
+    outline: none;
+}
+
+.work-card .close-btn {
+    background-color: white;
+    color: black;
     top: -9.5px;
     right: -9.5px;
 }
@@ -324,5 +324,21 @@ i{
     font-size: 2rem;
     padding: 0;
   }
-  
 
+  /* .reviews{
+    background-color: maroon;
+    color: aliceblue;
+
+  } */
+
+  .review-card:hover{
+    background-color: white;
+}
+
+
+.review-card img{
+    border: 2px solid snow;
+    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
+}
