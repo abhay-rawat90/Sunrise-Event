@@ -72,9 +72,13 @@ app.get("/admin-gallery",(req,res) => {
   res.render("admin-gallery");
 })
 
-// app.get("/home-login",(req,res) => {
-//   res.render("home after login");
-// })
+app.get("/home-login",(req,res) => {
+  res.render("home after login");
+})
+
+app.get("/google-login",(req,res) => {
+  res.render("google-login");
+})
 
 app.get("/birthday",(req,res) =>{
   res.render("birthday");
