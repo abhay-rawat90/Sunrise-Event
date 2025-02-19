@@ -35,12 +35,17 @@ body{
 }
 .dropdown-menu{
     background: transparent;
+    width: fit-content;
+    background-color: rgba(26, 28, 28, 0.5);
 }
 .dropdown-item{
     color: #ffffff;
 }
+.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
 .toggler-icon{
-    background-color: #383941;
+    background-color: #fffefd;
     display: block;
     position: absolute;
     height: 4px;
@@ -83,7 +88,7 @@ body{
     color: rgb(0, 0, 0);
 }
 .login{
-    border-color: #c0ebe4;
+    border-color: #383941;
     color: rgb(255, 255, 255);
 }
 .login:hover{

@@ -18,13 +18,16 @@
     flex-direction: row;
     width: 90%;
     justify-content: center;
+    align-items: center;
 }
 .birth1stcont{
+    flex-wrap: wrap-reverse;
     margin-bottom: 30px;
-    margin-top: 20px;
+    margin-top: 35px;
 }
 .togivebg{
     background-color: #fff7ef;
+    padding-top: 2rem;
 }
 .birthpara1 , .birthpara2, .birthpara3{
     display: flex;
@@ -36,16 +39,16 @@
     width: 80%;
 }
 .birthCont img{
-    width: 30%;
+    width: 25rem;
     border-radius: 10px;
-    height: 300px;
+    height: 16rem;
+    margin: 10px;
 }
 .birthCont h1{
     font-family: Montserrat;
     font-weight: 600;
     color: rgb(0,0,0);
-    line-height: 30px;
-    font-size: 25px;
+    line-height: 38px;
 }
 .birthCont p{
     font-family: Jost;
@@ -60,40 +63,55 @@
     color: rgb(0,0,0);
 }
 
-@media(max-width:960px){
-    .birth1stcont{
-        flex-direction: column-reverse;
-    }
-    .birth1stcont .birthpara1{
+@media(max-width:1000px){
+    .birthpara1 , .birthpara2, .birthpara3, .birthpara4, .birthpara5, .birthpara6{
         width: 80%;
-        justify-content: center;
     }
     .birthCont img{
-        
-        width: 60%;
-        transform: translateX(-10%);
+        width: 60vw;
         margin:0 auto;
         border-radius: 10px;
-        height: 350px;
-        margin-bottom: 20px;
+        height: auto;
+    }
+}
+@media(max-width:570px){
+    .birthCont img{
+        width: 90%;
+        /* transform: translateX(-10%); */
+        /* margin:0 auto; */
+        border-radius: 10px;
+        
+    }
+}
+@media(max-width:400px){
+    .birthCont img{
+        margin:0 auto;
+        border-radius: 10px;
+        height: auto;
     }
 }
 
-.birthnav img{
-    /* display: flexbox; */
-    
+.birthnav{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
+    color:#fff;
     width: 100%;
-    height: 600px;
-    /* background-color: rgba(128,128,128,0.5);
+    min-height: 70vh;
+    background-image: url(birth2.jpg);
+    background-size: cover;
+    background-attachment:local;
+    background-position:center;
+    background-color: rgba(128, 128, 128, 0.5); 
     background-blend-mode: multiply;
-    opacity: 0.7; */
-    filter: brightness(50%);
-    /* top: 43%; */
 }
-.birthnav .birthnavt{
-    position: absolute;
-    top: 35%;
-    left: 10%;
+.navbar-layout{
+    width: 100%;
+}
+.birthnavt{
+    padding:0 2rem;
 }
 .birthnav h1{
     /* position: absolute; */
@@ -107,24 +125,16 @@
     font-weight: 700;
 }
 .birthnav p{
-     /* position: absolute; */
-     font-family: Jost;
-     font-size: 15px;
-     font-weight: 400;
-     line-height: 23px;
-     color: rgb(242,242,242);
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    color: rgb(242, 242, 242);
      margin-top: 1rem;
-     /* top: 48%;
-    left: 10%; */
 }
-.birthnav button{
-    /* position: absolute; */
-    /* top: 60%;
-    left: 10%; */
-    margin-top: 15px;
-    width: 15%;
-    height: 2rem;
-    border-radius: 40px;
+.birthnavt button{
+    border-radius:1.5rem;
+    padding: 0.75rem;
     box-shadow: 0 0 10px rgba(0,0,0,.1);
     font-size: 16px;
     color: #333;
@@ -133,28 +143,7 @@
     background-color: #fff7ef;
     border: none;
     outline: none;
-}
-
-@media(max-width:768px){
-    .birthCont img{
-        width: 70%;
-        transform: translateX(-10%);
-        margin:0 auto;
-        border-radius: 10px;
-        height: 350px;
-        margin-bottom: 20px;
-    }
-}
-@media(max-width:570px){
-    .birthCont img{
-        width: 90%;
-        transform: translateX(-10%);
-        margin:0 auto;
-        border-radius: 10px;
-        height: 350px;
-        margin-bottom: 20px;
-        margin-left: 50px;
-    }
+    margin-bottom: 2rem;
 }
 
 section{
@@ -171,12 +160,13 @@ section{
     margin: 1em;
 }
 .faqsection{
-    padding: 4em 2em;
-}
+    margin-bottom: 2rem;
+} 
 .faq{
     list-style: none;
     max-width: 700px;
     margin: 0 auto;
+    padding: 0;
 }
 .faq li{
     background: #f2f2f2;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Card Form</title>
+    <link rel="stylesheet" href="/adminCardAddForm" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="adminCardAdd">
+      <form action="/addservice" method="POST">
+        <h2 class="title"><i>SUNRISE EVENTS</i></h2>
+        <div class="titleAdd">
+          <input name="title" type="text" placeholder="Add Title" required />
+          <i class="bx bx-plus" id="titleicon"></i>
+        </div>
+        <div class="titleAdd">
+          <textarea
+            name="description"
+            name="Description"
+            id="desc"
+            placeholder="Add Description"
+          ></textarea>
+          <i class="bx bxs-comment-add" id="descicon"></i>
+          <input class="mb-2" name="price" type="number" placeholder="Add Price" required />
+        </div>
+        <br /><br /><br />
+        <button type="submit" class="but">Add</button>
+      </form>
+    </div>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <script>
+      document.querySelectorAll(".wedgallery img").forEach((image) => {
+        // document.querySelector('.popupImage').style.display='block';
+        image.onclick = () => {
+          document.querySelector(".popupImage").style.display = "block";
+          document.querySelector(".popupImage img").src =
+            image.getAttribute("src");
+        };
+      });
+      document.querySelector(".popupImage span").onclick = () => {
+        document.querySelector(".popupImage").style.display = "none";
+      };
+    </script>
+  </body>
+</html>

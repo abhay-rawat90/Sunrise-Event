@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday - Sunrise Events</title>
+    <link rel="icon" type="image/x-icon" href="/logo.ico">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         </style>
@@ -12,24 +14,27 @@
             <%-
             include('./includes/navbar/nav-header');-%>
             <%-include('./includes/footer/footer-head');-%>
+            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/birthday.css">
 </head>
 <body>
-    <%- include('./includes/navbar/nav-body');-%>
+    
     <div class="birthnav">
-        <img src="birth2.jpg" alt="sevicenav">
+        <div class="navbar-layout">
+            <%- include('./includes/navbar/nav-body');-%>
+        </div>
+        <!-- <img src="birth2.jpg" alt="sevicenav"> -->
         <div class="birthnavt">
-            
-            <h1>Celebrate in Style – Unforgettable <br>Birthday Parties by Sunrise Events!</h1>
+            <h1>Celebrate in Style - Unforgettable <br>Birthday Parties by Sunrise Events!</h1>
             <p>From magical themes to dazzling décor, we make every birthday a fun-filled and unforgettable celebration!</p>
-                <a href="/booking"><button type="submit">Book Now!</button></a>
+            <a href="/booking"><button type="submit">Book Now!</button></a>
         </div>
         
     </div>
     <div class="birthCont">
         <div class="birth1stcont">
-            <img src="birth1.jpg" alt="birthday">
-            <div class="birthpara1">
+            <img src="birth1.jpg" alt="birthday" data-aos="fade-in">
+            <div class="birthpara1" data-aos="fade-in">
                 <h1> Celebrate Birthdays in Style with Sunrise Events!</h1>
                 <p>Birthdays are a time for joy, laughter, and creating lifelong memories, and at Sunrise Events, we make sure every 
                     celebration is as unique and special as the person being celebrated! Whether it’s a fun-filled kids’ party with 
@@ -43,7 +48,7 @@
         
         <div class="togivebg">
             <div class="birth2ndcont">
-                <div class="birthpara2">
+                <div class="birthpara2" data-aos="fade-in">
                     <h1>Our Birthday Planning Services</h1><br>
                     <h3>Themed Décor & Setup</h3><br>
                     <p>Keep guests entertained with:
@@ -84,7 +89,7 @@
             </div>
         </div>
         <div class="birth3rdCont">
-            <div class="birthpara3">
+            <div class="birthpara3" data-aos="fade-in">
                 <br>
                 <h1>Why Choose Sunrise Events for Your Birthday Party?</h1>
                 <p>ustomized Themes & Décor – Unique, creative, and picture-perfect setups. <br>
@@ -212,6 +217,7 @@
             </li>
         </ul>
     </section>
+    <%-include('./includes/footer/footer-body');-%>
     <script>
         const q =document.querySelectorAll('.q');
 const a =document.querySelectorAll('.a');
@@ -224,6 +230,13 @@ for(let i=0; i<q.length; i++){
     })
 }
     </script>
-    <%-include('./includes/footer/footer-body');-%>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration : 1000,
+        once : true
+      });
+    </script>
+    
 </body>
 </html>

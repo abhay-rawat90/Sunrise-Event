@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const seuser = require("./Models/user");
 const booking = require("./Models/book");
+const service = require("./Models/services");
 const CLIENT_ID =
   "437828331085-17gj54k6qhnri2q64trfbmg7s2s4vjjg.apps.googleusercontent.com"; // Replace with your Google Client ID
 const client = new OAuth2Client(CLIENT_ID);
@@ -54,8 +55,14 @@ app.get("/gallery", (req,res) => {
   res.render("gallerywed")
 });
 
-app.get("/admin-booking", (req,res) => {
-  res.render("adminbookings")
+app.get("/admin-booking", async (req, res) => {
+  try {
+    const bookings = await booking.find({});
+    res.render("adminbookings", { bookings });
+  } catch (error) {
+    console.error("Error fetching booking data:", error);
+    res.status(500).send("Error fetching booking data.");
+  }
 });
 
 app.get("/enter-email", (req,res) => {
@@ -88,6 +95,24 @@ app.get("/enter-email",(req,res) => {
   res.render("enter-email");
 });
 
+app.get("/contact", (req,res) => {
+  res.render("contact")
+});
+app.get("/rental",(req,res) => {
+  res.render("rental");
+})
+app.get("/wedding",(req,res) => {
+  res.render("wedding");
+})
+app.get("/birthday",(req,res) => {
+  res.render("birthday");
+})
+app.get("/others",(req,res) => {
+  res.render("otherevents");
+})
+app.get("/about", (req,res) => {
+  res.render("aboutus")
+});
 app.post("/profile/:id",(req,res) => {
   const { id } = req.params;
   console.log(id);
@@ -115,9 +140,9 @@ app.post("/signup", async (req, res) => {
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
   const name = await seuser.find({ name: username });
+  const services = await service.find({});
   if (name[0].name === username && await bcrypt.compare(password, name[0].password)) {
-    console.log(name);
-    res.render("home after login",{ name });
+    res.render("home after login",{ name, services });
   }
   // else{
   //   console.log("false");
@@ -258,4 +283,35 @@ app.post("/send-reset-email", async (req, res) => {
     console.error("Error sending email:", error);
     res.status(500).send("Error sending email");
   }
+});
+
+
+
+app.get("/home-admin", async (req,res) => {
+  const name = await seuser.find({ name: "admin" });
+  let services = await service.find();
+  res.render("home after login",{ name, services});
+});
+
+//DELETE route method override not working
+app.post("/card/:id", async (req, res) => {
+  const { id } = req.params;
+  const name = await seuser.find({ name: "admin" });
+  console.log(id);
+  await service.findByIdAndDelete(id);
+  res.redirect("/home-admin");
+});
+
+
+//post request for adding a service card
+app.post("/addservice", async (req, res) => {
+  const { title, description } = req.body;
+  
+  console.log(title, description);
+  let s1 = new service({
+    title: title,
+    description: description,
+  }).save();
+  let services = await service.find();
+  res.redirect("/home-admin");
 });

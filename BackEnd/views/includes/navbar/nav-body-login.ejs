@@ -22,13 +22,7 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <% if(name[0].name === "admin" && name[0].password === "$2b$13$QqFmTLVoNhkMKOZGHPo4q.IWou6QcuYHY6H/MdO/z4RaKulL4uaQW") { %>
-            <a class="nav-link" href="/admin-gallery">Gallery</a>
-            <% } else { %>
-              <a class="nav-link" href="/gallery">Gallery</a>
-              <% } %>
-
-
+            <a class="nav-link" href="/gallery">Gallery</a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -56,6 +50,18 @@
           </li>
         </ul>
         <div class="login-d-flex">
+          <% if(name[0].name === "admin" && name[0].password === "$2b$13$QqFmTLVoNhkMKOZGHPo4q.IWou6QcuYHY6H/MdO/z4RaKulL4uaQW") { %>
+            <a href="/admin-booking" >
+              <button class="profile" type="submit">
+                <i class='bx bxs-user-circle'></i>
+            </button>
+            </a>
+            <% } else { %>
+              <button class="profile" type="submit">
+                <i class='bx bxs-user-circle'></i>
+            </button>
+            <% } %>
+
             
             <a href="http://localhost:8080">
 
