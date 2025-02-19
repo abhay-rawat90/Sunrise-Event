@@ -1,15 +1,11 @@
 .hero{
     color:#fff;
-    background-color: burlywood;
     width: 100%;
     min-height: 100vh;
     padding-bottom: 4rem;
-    background-image: url(Outdoor-Mehndi-Setup.jpg);
-    background-size: cover;
-    background-attachment:local;
-    background-position:center;
-    background-color: rgba(128, 128, 128, 0.5); /* Gray tint */
-    background-blend-mode: multiply;
+    /* background-color: rgba(128, 128, 128, 0.75); 
+    background-blend-mode: multiply; */
+    background-color: #444650;
 }
 
 .navbar-layout{
@@ -28,15 +24,17 @@
 
 }
 .title{
-    font-family: oswald;
+    font-family: Montserrat;
     font-weight: 600;
-    font-size:3rem;
+    color: rgb(255, 255, 255);
+    line-height: 38px;
+    font-size: 40px;
 }
 .subtitle{
     margin-top: 1rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    /* font-weight: 200; */
-    font-size:1.1rem;
+    font-family: Jost;
+    font-size: 18px;
+    font-weight: 25px;
 }
 button{
     
@@ -58,8 +56,9 @@ button{
 .icons{
     display: flex;
     align-items: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Jost;
     font-size: 1rem;
+    font-size: 18px;
 }
 .bc{
     background-color:#EEEBD7;

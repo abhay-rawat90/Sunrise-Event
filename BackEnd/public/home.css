@@ -64,10 +64,9 @@ html {
     justify-content: flex-start;
     gap: 5rem;
     color:#fff;
-    background-color: burlywood;
     width: 100%;
     min-height: 100vh;
-    background-image: url(Outdoor-Mehndi-Setup.jpg);
+    background-image: url(Outdoor-Mehndi-Setup.png);
     background-size: cover;
     background-attachment:local;
     background-position:center;
@@ -119,7 +118,7 @@ button{
 }
 .bc{
     background-color:#EEEBD7;
-    border-color:#EEEBD7 ;
+    border: none;
 }
 .os{
     background-color: #696D7D;
@@ -137,8 +136,8 @@ button{
     height: auto;
 }
 
-.services-container,.work-container{
-    height: auto;
+.services-container,.work-container,.reviews{
+    min-height:65vh;
     background-color: antiquewhite;
     display: flex;
     justify-content: center;
@@ -146,7 +145,7 @@ button{
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
-    padding: 1rem 1rem 0;
+    padding: 2rem;
 }
 .services, .work{
     display: flex;
@@ -156,7 +155,6 @@ button{
     width: 100%;
 }
 h1,p{
-    position: relative;
     text-align: center;
     margin: 1rem;
 }
@@ -167,6 +165,7 @@ h1{
 p{
     font-family: "Source Sans 3";
     font-size: large;
+    margin-bottom: 2rem;
 }
 i{
     font-size: 1.5rem;
@@ -176,7 +175,8 @@ i{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     display: inline-block;
-    border: 2px solid black;
+    border: 2px solid #20201e;
+    color: #000000;
     height: 13.5rem;
     width: 20rem;
     background-color: azure;
@@ -192,15 +192,10 @@ i{
 .services .cards{
     padding: 1rem;
 }
-.services button{
+.services .add-link{
         all: unset; /* Removes all default styles */
         display: inline-block; /* Ensures it behaves like a button */
         cursor: pointer; /* Keeps the pointer effect */
-}
-.work button{
-    all: unset; /* Removes all default styles */
-    display: inline-block; /* Ensures it behaves like a button */
-    cursor: pointer; /* Keeps the pointer effect */
 }
 .redirect-services{
     color: inherit;
@@ -231,7 +226,7 @@ i{
     font-size: small;
 }
 .work-container{
-    background-color: black;
+    background-color: #1f211f;
     color: aliceblue;
 }
 .work-card img{
@@ -283,10 +278,19 @@ i{
     font-size: 14px;
     cursor: pointer;
     z-index: 1;
+    border: none;
+    outline: none; 
+    padding: 0;
+    line-height: 1;
 }
-.work-card .close-btn{
-    background-color: white ;
-    color:black;
+
+.close-btn:focus {
+    outline: none;
+}
+
+.work-card .close-btn {
+    background-color: white;
+    color: black;
     top: -9.5px;
     right: -9.5px;
 }
@@ -320,5 +324,21 @@ i{
     font-size: 2rem;
     padding: 0;
   }
-  
 
+  .review-card{
+    background-color: white;
+
+  }
+
+  .review-card:hover{
+    background-color: white;
+}
+
+
+
+.review-card img{
+    border: 2px solid snow;
+    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
+}

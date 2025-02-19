@@ -6,49 +6,10 @@
     z-index: 1;
 }
 
-.top{
-    display:flex;
-    justify-content: center;
-    /* border-bottom:2px solid #823038; */
-}
-
-
-
-.im1{
-    flex-basis: 40vw;
-    /* height:100vh;
-    width:40vw; */
-    /* border: 2px solid red; */
-    
-}
-.side-image{
-    width: 100%;
-    height: 100vh;
-}
-@media(min-width:400px){
-    .im1{
-        width: 0px;
-        /* height:100vh;
-        width:40vw; */
-        /* border: 2px solid red; */
-        
-    }
-}
-@media(height:840px){
-    .im1{
-        width: 0px;
-        /* height:100vh;
-        width:40vw; */
-        /* border: 2px solid red; */
-        
-    }
-}
-
 .sign-up{
     min-height:100vh ;
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url(wedbg2.jpg);
@@ -61,10 +22,13 @@
     margin-bottom: 1rem;
     color:#ffffff;
 }
-
+form{
+    width: 90%;
+}
 .form{
     margin-top: 1rem;
     margin-bottom: 1rem;
+    width: 26rem;
     padding: 0;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -98,23 +62,24 @@
     font-size: 16px;
     border-radius: 20px;
     background: transparent;
-    margin-bottom: 30px;
+    margin-bottom: 1.3rem;
 }
 .form-input::placeholder{
     color: gray;
     font-family: poppins;
 }
 .submit{
-    width: 16rem;
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     color:#151412;
-    margin: 15px;
-    background-color: transparent;
+    margin: 1.5rem 0;
+    background-color:white;
     border-radius: 20px;
-    border: 1px solid grey  ;
+    border: none;
     cursor: pointer;
     font-family:Poppins;
+    font-weight: 600
 }
 *{
     margin: 0;

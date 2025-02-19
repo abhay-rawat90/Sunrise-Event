@@ -60,7 +60,7 @@ app.get("/enter-email", (req,res) => {
 app.get("/reset-password", (req,res) => {
   res.render("reset-password")
 });
-app.get("/contactus", (req,res) => {
+app.get("/contact", (req,res) => {
   res.render("contact")
 });
 app.get("/booking",(req,res) => {
@@ -70,6 +70,21 @@ app.get("/booking",(req,res) => {
 app.get("/admin-gallery",(req,res) => {
   res.render("admin-gallery");
 })
+app.get("/rental",(req,res) => {
+  res.render("rental");
+})
+app.get("/wedding",(req,res) => {
+  res.render("wedding");
+})
+app.get("/birthday",(req,res) => {
+  res.render("birthday");
+})
+app.get("/others",(req,res) => {
+  res.render("otherevents");
+})
+app.get("/about", (req,res) => {
+  res.render("aboutus")
+});
 //Post req from signup
 app.post("/signup", async (req, res) => {
   const { name, mobilenumber, email, password, confirm } = req.body;

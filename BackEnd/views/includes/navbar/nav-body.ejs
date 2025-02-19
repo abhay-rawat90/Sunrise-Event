@@ -36,17 +36,17 @@
             Services
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Wedding</a></li>
-            <li><a class="dropdown-item" href="#">Birthday</a></li>
-            <li><a class="dropdown-item" href="#">Rental Furniture</a></li>
-            <li><a class="dropdown-item" href="#">Other Events</a></li>
+            <li><a class="dropdown-item" href="/wedding">Wedding</a></li>
+            <li><a class="dropdown-item" href="/birthday">Birthday</a></li>
+            <li><a class="dropdown-item" href="/rental">Rental Furniture</a></li>
+            <li><a class="dropdown-item" href="/others">Other Events</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="/contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="/about">About Us</a>
         </li>
       </ul>
       <div class="d-flex">
@@ -69,3 +69,33 @@
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
   crossorigin="anonymous"
 ></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      let dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+      dropdownToggles.forEach(toggle => {
+          toggle.addEventListener("click", function () {
+              let parentDropdown = this.closest(".dropdown");
+
+              // Remove 'show' from all dropdowns first
+              document.querySelectorAll(".dropdown").forEach(dropdown => {
+                  if (dropdown !== parentDropdown) {
+                      dropdown.classList.remove("show");
+                  }
+              });
+
+              // Toggle 'show' class on clicked dropdown
+              parentDropdown.classList.toggle("show");
+          });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+          if (!event.target.closest(".dropdown")) {
+              document.querySelectorAll(".dropdown").forEach(dropdown => {
+                  dropdown.classList.remove("show");
+              });
+          }
+      });
+  });
+</script>

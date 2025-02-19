@@ -3,16 +3,102 @@
 <head>
     <%-include('./includes/navbar/nav-header');-%>
     <%-include('./includes/footer/footer-head');-%>
-    <title>Booking</title>
+    <title>Booking - Sunrise Events</title>
+    <link rel="icon" type="image/x-icon" href="/logo.ico">
+    <link rel="stylesheet" href="/booking.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
-    <%- include('./includes/navbar/nav-body');-%>
-    <!-- Calendly inline widget begin -->
-    <div class="calendly-inline-widget" id="booking" data-url="https://calendly.com/gopallsharma93/book-a-consultation?background_color=eeebd7&primary_color=696D7D" style="min-width: 320px; height: 700px">
-      <div class="spinner" id="spinner"></div>
+  <%- include('./includes/navbar/nav-body');-%>
+  <br><br>
+  <div class="bookcont">
+    
+  <div class="bookform">
+    <form action="">
+      <!-- <h2 class="title"><i>SUNRISE EVENTS</i></h2> -->
+          <h1>Book Now!</h1>
+      <div class="bookbox">
+        <select name="eventsel" id="eventsel">
+          <option class="f" value="0" selected>Select Event</option>
+          <option class="f" value="1">Wedding</option>
+          <option class="f" value="2">Haldi Ceremony</option>
+          <option class="f" value="3">Sangeet Ceremony</option>
+          <option class="f" value="4">Reception</option> 
+          <option class="f" value="5">Catering</option> 
+          <option class="f" class="f" value="6">Birthday Party</option> 
+          <option class="f" value="5">Rental Furniture</option> 
+          <option class="f" value="5">Other Events</option>          
+        </select>
     </div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async defer></script>
-    <!-- Calendly inline widget end -->
-    <%-include('./includes/footer/footer-body');-%>
+    <div class="bookbox">        
+        <input type="text" placeholder="Other Events?">
+        <!-- <i class='bx bxs-user'></i> -->
+    </div>
+    <div class="bookbox">        
+      <input type="text" placeholder="Name" required>
+      <!-- <i class='bx bxs-user'></i> -->
+    </div>
+    <div class="bookbox">        
+      <input type="number" placeholder="Mobile No." required>
+      <!-- <i class='bx bxs-user'></i> -->
+    </div>
+    <div class="bookbox">
+      <input type="date" class="date">
+    </div>
+    <div class="bookbox">
+      <textarea name="suggestion" id="desc" placeholder="Any Customization?"></textarea>
+      <!-- <i class='bx bxs-comment-add' id="descicon"></i> -->
+  </div>
+  
+  <br><br>
+  <button type="submit" class="butt" id = "pay-btn">Proceed To Payment</button>
+    </form>
+  </div>
+  <!-- Calendly inline widget begin -->
+  <div class="calendly-inline-widget" id="booking" data-url="https://calendly.com/gopallsharma93/book-a-consultation?background_color=eeebd7&primary_color=696D7D" style="min-width: 320px; height: 700px">
+    <div class="spinner" id="spinner"></div>
+  </div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async defer></script>
+  <!-- Calendly inline widget end -->
+  <!-- <button id = "pay-btn">Payment For Advance</button> -->
+</div>
+<br><br>
+  <%-include('./includes/footer/footer-body');-%>
+  
+  <script>
+      document.getElementById("pay-btn").addEventListener("click", async function () {
+        const response = await fetch("/payment/create-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ amount: 500, currency: "INR" }) // Example: ₹500
+        });
+        const order = await response.json();
+  
+        const options = {
+          key: "<%= process.env.RAZORPAY_KEY_ID %>", // Use your Razorpay Key ID
+          amount: order.amount,
+          currency: order.currency,
+          name: "Sunrise Event",
+          description: "Event Booking",
+          order_id: order.id,
+          handler: function (response) {
+            alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+          },
+          theme: { color: "#F37254" },
+          modal: {
+            ondismiss: function() {
+              alert('Payment popup closed');
+            }
+          }
+        };
+  
+        const rzp = new Razorpay(options);
+        rzp.on('payment.failed', function (response){
+          alert("Payment failed! Error: " + response.error.description);
+        });
+        rzp.open();
+      });
+    </script>
 </body>
 </html>
