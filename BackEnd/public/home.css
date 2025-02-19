@@ -138,7 +138,7 @@ button{
 }
 
 .services-container,.work-container,.reviews{
-    height: auto;
+    min-height:65vh;
     background-color: antiquewhite;
     display: flex;
     justify-content: center;

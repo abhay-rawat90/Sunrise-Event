@@ -7,5 +7,8 @@ const userSchema = new Schema({
   email: String,
   password: String,
 });
+
 const seuser = mongoose.model("seuser", userSchema);
+
 module.exports = seuser;
+

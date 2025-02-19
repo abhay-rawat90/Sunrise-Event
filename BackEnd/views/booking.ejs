@@ -4,7 +4,6 @@
     <%-include('./includes/navbar/nav-header');-%>
     <%-include('./includes/footer/footer-head');-%>
     <title>Booking</title>
-    <title>Booking</title>
     <link rel="stylesheet" href="/booking.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
@@ -13,55 +12,57 @@
   <%- include('./includes/navbar/nav-body');-%>
   <div class="bookcont">
   <div class="bookform">
-    <form action="">
-      <h2 class="title"><i>SUNRISE EVENTS</i></h2>
+    <form id="booking-form" method="POST" action="/booking">
           <h1>Book Now!</h1>
-      <div class="bookbox">
-        <select name="eventsel" id="eventsel">
-          <option class="f" value="0" selected>Select Event</option>
-          <option class="f" value="1">Wedding</option>
-          <option class="f" value="2">Haldi Ceremony</option>
-          <option class="f" value="3">Sangeet Ceremony</option>
-          <option class="f" value="4">Reception</option> 
-          <option class="f" value="5">Catering</option> 
-          <option class="f" class="f" value="6">Birthday Party</option> 
-          <option class="f" value="5">Rental Furniture</option> 
-          <option class="f" value="5">Other Events</option>          
-        </select>
+    <div class="bookbox">        
+        <input type="text" placeholder="Event Name" name="event" required>
     </div>
     <div class="bookbox">        
-        <input type="text" placeholder="Other Events?">
-        <!-- <i class='bx bxs-user'></i> -->
+      <input type="text" placeholder="Name" name="name" required>
     </div>
     <div class="bookbox">        
-      <input type="text" placeholder="Name" required>
-      <!-- <i class='bx bxs-user'></i> -->
+      <input type="number" placeholder="Mobile No." name="mobilenumber" required>
     </div>
     <div class="bookbox">        
-      <input type="number" placeholder="Mobile No." required>
-      <!-- <i class='bx bxs-user'></i> -->
-    </div>
-    <div class="bookbox">
-      <input type="date" class="date">
-    </div>
-    <div class="bookbox">
-      <textarea name="suggestion" id="desc" placeholder="Any Customization?"></textarea>
-      <!-- <i class='bx bxs-comment-add' id="descicon"></i> -->
+      <input type="email" placeholder="Email" name="email" required>
   </div>
+  <div class="bookbox">
+    <input type="text" placeholder="Venue Name" name="venue" required>
+  </div>
+  <div class="bookbox">
+    <input type="text" placeholder="Expected No. of Guests" name="guests" required>
+  </div>
+  <div class="bookbox">
+    <input type="date" class="date" name="date" required>
+  </div>
+  <!-- <div class="bookbox">
+    <input type="time" class="time" name="time" required>
+  </div> -->
+
+  <div class="bookbox">
+    <textarea id="desc" placeholder="Any Customization?" name="anycustom"></textarea>
+  </div>
+  <button type="button" class="butt" id="pay-btn">Proceed To Payment</button>
   
-  <br><br>
-  <button type="submit" class="butt" id = "pay-btn">Proceed To Payment</button>
-    </form>
+  <div class=" pay-check">
+    <input type="checkbox" id="payment-done" name="payment_done" value="yes">
+    <label for="payment-done">Payment Done</label>
   </div>
-  <!-- Calendly inline widget begin -->
+  <div class="bookbox">
+    <input type="text" placeholder="Paste Payment ID here" name="pay_id" required>
+  </div>
+
+  <button type="submit" class="butt final-submit" id="formsubmit">Submit</button>
+  </form>
+  </div>
+  <!-- Calendly inline widget begin
   <div class="calendly-inline-widget" id="booking" data-url="https://calendly.com/gopallsharma93/book-a-consultation?background_color=eeebd7&primary_color=696D7D" style="min-width: 320px; height: 700px">
     <div class="spinner" id="spinner"></div>
   </div>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async defer></script>
-  <!-- Calendly inline widget end -->
-  <!-- <button id = "pay-btn">Payment For Advance</button> -->
-</div>
-  <%-include('./includes/footer/footer-body');-%>
+  Calendly inline widget end
+</div> -->
+
   
   <script>
       document.getElementById("pay-btn").addEventListener("click", async function () {
@@ -79,8 +80,12 @@
           name: "Sunrise Event",
           description: "Event Booking",
           order_id: order.id,
-          handler: function (response) {
+          handler: async function (response) {
             alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+            // Check the payment done checkbox
+            document.getElementById("payment-done").checked = true;
+            // Fill the payment ID field
+            document.querySelector("input[name='pay_id']").value = response.razorpay_payment_id;
           },
           theme: { color: "#F37254" },
           modal: {
@@ -96,6 +101,15 @@
         });
         rzp.open();
       });
+
+      document.getElementById("formsubmit").addEventListener("click", function (event) {
+        const paymentDoneCheckbox = document.getElementById("payment-done");
+        if (!paymentDoneCheckbox.checked) {
+          event.preventDefault();
+          alert("Please complete the payment before submitting the form.");
+        }
+      });
     </script>
+    <%-include('./includes/footer/footer-body');-%>
 </body>
 </html>

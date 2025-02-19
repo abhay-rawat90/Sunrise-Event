@@ -22,7 +22,13 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/gallery">Gallery</a>
+            <% if(name[0].name === "admin" && name[0].password === "$2b$13$QqFmTLVoNhkMKOZGHPo4q.IWou6QcuYHY6H/MdO/z4RaKulL4uaQW") { %>
+            <a class="nav-link" href="/admin-gallery">Gallery</a>
+            <% } else { %>
+              <a class="nav-link" href="/gallery">Gallery</a>
+              <% } %>
+
+
           </li>
           <li class="nav-item dropdown">
             <a
@@ -50,7 +56,7 @@
           </li>
         </ul>
         <div class="login-d-flex">
-          <form method="post" action="/profile/<%=name[0].id%>" >
+          <form method="post" action="/profile/<%=name[0]._id%>" >
             <button class="profile" >
             <%=name[0].name%>
             </button></form>

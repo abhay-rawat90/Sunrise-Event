@@ -7,6 +7,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const app = express();
 const seuser = require("./Models/user");
+const booking = require("./Models/book");
 const CLIENT_ID =
   "437828331085-17gj54k6qhnri2q64trfbmg7s2s4vjjg.apps.googleusercontent.com"; // Replace with your Google Client ID
 const client = new OAuth2Client(CLIENT_ID);
@@ -86,8 +87,10 @@ app.get("/enter-email",(req,res) => {
 app.post("/profile/:id",(req,res) => {
   const { id } = req.params;
   console.log(id);
-  const userarr = seuser.find({ _id: id });
+  const userarr = seuser.find({name : name});
+  console.log(userarr);
   const user = userarr[0];
+  
   res.render("Profile Section",{ user });
 });
 //Post req from signup
@@ -101,17 +104,13 @@ app.post("/signup", async (req, res) => {
       mobilenumber: mobilenumber,
       password: hash,
     }).save();
-    res.redirect("/");
+    res.redirect("/login");
   }
 });
 //post req from login
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
   const name = await seuser.find({ name: username });
-  if(password == "admin#123" && username == "admin")
-  {
-    res.render("admin");
-  }
   if (name[0].name === username && await bcrypt.compare(password, name[0].password)) {
     console.log(name);
     res.render("home after login",{ name });
@@ -121,6 +120,34 @@ app.post("/login", async (req, res) => {
   // }
   
 });
+
+app.post("/booking", async (req, res) => {
+  const { event, name, mobilenumber, email, venue, guests, date, anycustom, payment_done,pay_id } = req.body;
+
+  if (payment_done !== 'yes') {
+    return res.status(400).send("Payment not confirmed.");
+  }
+
+  try {
+    let book1 = new booking({
+      event: event,
+      name: name,
+      mobilenumber: mobilenumber,
+      email: email,
+      venue: venue,
+      guests: guests,
+      date: date,
+      anycustom: anycustom,
+      pay_id:pay_id,
+    });
+    await book1.save();
+    res.redirect("/");
+  } catch (error) {
+    console.error("Error saving booking details:", error);
+    res.status(500).send("Error saving booking details.");
+  }
+});
+
 // API Endpoint to verify Google Token
 //For google login
 app.post("/verify-token", async (req, res) => {

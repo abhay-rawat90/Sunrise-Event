@@ -33,121 +33,235 @@
       </div>
       </div>
     </div>
-    <div class="services-container">
-      <h1>Our services</h1>
-      <p>Comprehensive event doceration solution for every occasion</p>
-      <div class="services">
-        <a class="redirect-services" href="#">
-          <div class="cards">
-            <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
-            <div class="title-card">Wedding Decoration</div>
-            <div class="subtitle-card">
-              Transform your special day with our elegant wedding decoration
-              services
-            </div>
-        </a>
-        </div>
-       <a href="#" class="redirect-services">
-        <div class="cards">
-          <div class="icon"><i class="fa-solid fa-champagne-glasses"></i></div>
-          <div class="title-card">Reception Setup</div>
-          <div class="subtitle-card">
-            Create memorable celebrations with our reception decoration services
+    <% if(name[0].name === "admin" && name[0].password === "$2b$13$QqFmTLVoNhkMKOZGHPo4q.IWou6QcuYHY6H/MdO/z4RaKulL4uaQW") { %>
+      <div class="services-container">
+        <h1>Our services</h1>
+        <p>Comprehensive event doceration solution for every occasion</p>
+        <div class="services">
+          <a class="redirect-services" href="#">
+            <div class="cards">
+              <button class="close-btn add-link" >×</button>
+              <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+              <div class="title-card">Wedding Decoration</div>
+              <div class="subtitle-card">
+                Transform your special day with our elegant wedding decoration
+                services
+              </div>
+          </a>
           </div>
-        </div>
-       </a>
-        <a href="#" class="redirect-services">
+         <a href="#" class="redirect-services">
           <div class="cards">
-            <div class="icon"><i class="fa-solid fa-music"></i></div>
-            <div class="title-card">Sangeet Decoration</div>
+            <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+            <div class="icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+            <div class="title-card">Reception Setup</div>
             <div class="subtitle-card">
-              Set a perfect ambience for your musical celebration
+              Create memorable celebrations with our reception decoration services
             </div>
           </div>
-        </a>
-        <a href="#" class="redirect-services">
-          <div class="cards">
-            <div class="icon"><i class="fa-solid fa-sun"></i></div>
-            <div class="title-card">Haldi Decoration</div>
-            <div class="subtitle-card">
-              Beautiful decoration for traditional haldi ceremonies
+         </a>
+          <a href="#" class="redirect-services">
+            <div class="cards">
+              <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+              <div class="icon"><i class="fa-solid fa-music"></i></div>
+              <div class="title-card">Sangeet Decoration</div>
+              <div class="subtitle-card">
+                Set a perfect ambience for your musical celebration
+              </div>
             </div>
-          </div>
-        </a>
-        <a href="#" class="redirect-services">
-          <div class="cards">
-            <div class="icon"><i class="fa-solid fa-couch"></i></div>
-            <div class="title-card">Rental Furniture</div>
-            <div class="subtitle-card">
-              Premium furniture rentals for your event needs
+          </a>
+          <a href="#" class="redirect-services">
+            <div class="cards">
+              <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+              <div class="icon"><i class="fa-solid fa-sun"></i></div>
+              <div class="title-card">Haldi Decoration</div>
+              <div class="subtitle-card">
+                Beautiful decoration for traditional haldi ceremonies
+              </div>
             </div>
-          </div>
-        </a>
-        <a href="#" class="redirect-services">
-          <div class="cards">
-            <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
-            <div class="title-card">Sitting Arrangment</div>
-            <div class="subtitle-card">
-              Professional sitting layout with maximum comfort
+          </a>
+          <a href="#" class="redirect-services">
+            <div class="cards">
+              <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+              <div class="icon"><i class="fa-solid fa-couch"></i></div>
+              <div class="title-card">Rental Furniture</div>
+              <div class="subtitle-card">
+                Premium furniture rentals for your event needs
+              </div>
             </div>
-          </div>
-        </a>
-        <a href="#" class="redirect-services">
-          <div class="cards">
-            <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
-            <div class="title-card">Other Events</div>
-            <div class="subtitle-card">
-              Baby Shower, Birthday Parties, Engagements, Corporate Events
+          </a>
+          <a href="#" class="redirect-services">
+            <div class="cards">
+              <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+              <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+              <div class="title-card">Sitting Arrangment</div>
+              <div class="subtitle-card">
+                Professional sitting layout with maximum comfort
+              </div>
             </div>
+          </a>
+          <a href="#" class="redirect-services">
+            <div class="cards">
+              <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+              <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+              <div class="title-card">Other Events</div>
+              <div class="subtitle-card">
+                Baby Shower, Birthday Parties, Surprise Parties, Corporate Events
+              </div>
+            </div>
+          </a>
+  
+          <button class="add-link"> 
+          <div class="add-card">
+            +
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="work-container" id = "works">
-      <h1>Our Work</h1>
-      <p>Browse through our recent event decorations</p>
-      <div class="work" >
-        <div class="cards work-card">
-          <img
-            src="https://skift.com/wp-content/uploads/2024/10/Destination-Indian-Wedding-amish-thakkar-7O422yG_b80-unsplash_Scaled.jpg"
-            alt=""
-          />
-        </div>
-        <div class="cards work-card">
-          <img
-            src="https://youthincmag.com/wp-content/uploads/2019/04/Wedding-trends-pinterest-1280x720.jpg"
-            alt=""
-          />
-        </div>
-        <div class="cards work-card">
-          <img
-            src="https://www.mohifashion.com/cdn/shop/articles/BB_216433_Final_320eb394-2ae4-42e1-91f1-7e342fc976df.jpg?v=1718363593"
-            alt=""
-          />
-        </div>
-        <div class="cards work-card">
-          <img
-            src="https://cdn0.weddingwire.in/article/9535/3_2/960/jpg/15359-hindu-marriage-the-lightsmiths-lead-image.jpeg"
-            alt=""
-          />
-        </div>
-        <div class="cards work-card">
-          <img
-            src="https://rainmakerweddings.com/wp-content/uploads/2024/11/Hindu-wedding-picture-768x512.webp"
-            alt=""
-          />
-        </div>
-        <div class="cards work-card">
-          <img
-            src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/09/1554703171wedding-decor.jpg"
-            alt=""
-          />
+        </button>
+  
         </div>
       </div>
-    </div>
+      <div class="work-container" id = "works">
+        <h1>Our Work</h1>
+        <p>Browse through our recent event decorations</p>
+        <div class="work" >
+          <div class="cards work-card">
+            <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+            <img
+              src="https://skift.com/wp-content/uploads/2024/10/Destination-Indian-Wedding-amish-thakkar-7O422yG_b80-unsplash_Scaled.jpg"
+              alt=""
+            />
+          </div>
+          <div class="cards work-card">
+            <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+            <img
+              src="https://youthincmag.com/wp-content/uploads/2019/04/Wedding-trends-pinterest-1280x720.jpg"
+              alt=""
+            />
+          </div>
+          <div class="cards work-card">
+            <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+            <img
+              src="https://www.mohifashion.com/cdn/shop/articles/BB_216433_Final_320eb394-2ae4-42e1-91f1-7e342fc976df.jpg?v=1718363593"
+              alt=""
+            />
+          </div>
+          <div class="cards work-card">
+            <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+            <img
+              src="https://cdn0.weddingwire.in/article/9535/3_2/960/jpg/15359-hindu-marriage-the-lightsmiths-lead-image.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="cards work-card">
+            <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+            <img
+              src="https://rainmakerweddings.com/wp-content/uploads/2024/11/Hindu-wedding-picture-768x512.webp"
+              alt=""
+            />
+          </div>
+          <div class="cards work-card">
+            <form method="get" id="costume" action="/test"><a  class="close-btn add-link" href="#" onclick="myFunction()">×</a></form>
+            <img
+              src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/09/1554703171wedding-decor.jpg"
+              alt=""
+            />
+          </div>
+          
+          <button class="add-link"> 
+            <div class="add-card">
+              +
+            </div>
+          </button>
+        </div>
+      </div>
+    <% } else {  %>
+        <div class="services-container">
+          <h1>Our services</h1>
+          <p>Comprehensive event doceration solution for every occasion</p>
+          <div class="services">
+            <a href="#" class="redirect-services">
+              <div class="cards">
+                <div class="icon"><i class="fa-solid fa-music"></i></div>
+                <div class="title-card">Wedding Decoration</div>
+                <div class="subtitle-card">
+                  Transform your special day with our elegant wedding decoration
+                  services
+                </div>
+              </div>
+            </a>
+            <a href="#" class="redirect-services">
+              <div class="cards">
+                <div class="icon"><i class="fa-solid fa-couch"></i></div>
+                <div class="title-card">Rental Furniture</div>
+                <div class="subtitle-card">
+                  Premium furniture rentals for your event needs
+                </div>
+              </div>
+            </a>
+            <a href="#" class="redirect-services">
+              <div class="cards">
+                <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+                <div class="title-card">Other Events</div>
+                <div class="subtitle-card">
+                  Baby Shower, Engagements, Receptions Corporate Events
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="work-container" id = "works">
+          <h1>Our Work</h1>
+          <p>Browse through our recent event decorations</p>
+          <div class="work" >
+            <div class="cards work-card">
+              <img
+                src="https://skift.com/wp-content/uploads/2024/10/Destination-Indian-Wedding-amish-thakkar-7O422yG_b80-unsplash_Scaled.jpg"
+                alt=""
+              />
+            </div>
+            <div class="cards work-card">
+              <img
+                src="https://youthincmag.com/wp-content/uploads/2019/04/Wedding-trends-pinterest-1280x720.jpg"
+                alt=""
+              />
+            </div>
+            <div class="cards work-card">
+              <img
+                src="https://www.mohifashion.com/cdn/shop/articles/BB_216433_Final_320eb394-2ae4-42e1-91f1-7e342fc976df.jpg?v=1718363593"
+                alt=""
+              />
+            </div>
+            <div class="cards work-card">
+              <img
+                src="https://cdn0.weddingwire.in/article/9535/3_2/960/jpg/15359-hindu-marriage-the-lightsmiths-lead-image.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="cards work-card">
+              <img
+                src="https://rainmakerweddings.com/wp-content/uploads/2024/11/Hindu-wedding-picture-768x512.webp"
+                alt=""
+              />
+            </div>
+            <div class="cards work-card">
+              <img
+                src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/09/1554703171wedding-decor.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+      <% } %>
+    
     <a href="https://wa.me/916265366651?text=Hello%2C%20I%27m%20interested%20in%20your%20services!" target="_blank" class="whatsapp-float">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <script> 
+      function myFunction() { 
+          document.getElementById("costume").submit(); 
+      } 
+  </script> 
+  
     <script>
       // Wait for the DOM to load
       document.addEventListener('DOMContentLoaded', () => {
